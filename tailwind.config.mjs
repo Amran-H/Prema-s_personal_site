@@ -1,3 +1,7 @@
+/* eslint-disable import/no-anonymous-default-export */
+
+import { Outfit } from 'next/font/google';
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -8,9 +12,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        lightHover: "#fcf4ff",
+        darkHover: "#fcf4ff",
+        darkTheme: "#11001f",
       },
+      fontFamily: {
+        Outfit: ["Outfit", "sans-serif"],
+        Ovo: ["Ovo", "sans-serif"],
+      }
     },
   },
   plugins: [],
