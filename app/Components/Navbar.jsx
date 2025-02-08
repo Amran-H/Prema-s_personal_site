@@ -2,7 +2,7 @@ import { assets } from '@/assets/assets';
 import Image from 'next/image';
 import React, { useEffect, useRef, useState } from 'react';
 
-const Navbar = () => {
+const Navbar = ({ isDarkMode, setIsDarkMode }) => {
     const [isScroll, setIsScroll] = useState(false);
     const sideMenuRef = useRef();
     const openMenu = () => {
@@ -25,11 +25,11 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 ${isScroll ? "bg-white bg-opacity-50 backdrop-blur-lg shadow-sm" : ""}`} >
+            <nav className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 ${isScroll ? "bg-white bg-opacity-50 backdrop-blur-lg shadow-sm dark:bg-darkTheme dark:bg-opacity-50 dark:backdrop-blur-lg dark:shadow-white/20" : ""}`} >
                 <a href="#top">
                     <p className=' cursor-pointer font-bold text-2xl font-Ovo'>Amran Hossain <span className='text-red-700'>.</span></p>
                 </a>
-                <ul className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 ${isScroll ? "" : "bg-gray-300 shadow-sm bg-opacity-10"}`}>
+                <ul className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 ${isScroll ? "" : "bg-gray-300 shadow-sm bg-opacity-10 "}`}>
                     <li><a href="#top" className='font-Ovo'>Home</a></li>
                     <li><a href="#about" className='font-Ovo'>About me</a></li>
                     <li><a href="#services" className='font-Ovo'>Services</a></li>
@@ -38,21 +38,21 @@ const Navbar = () => {
                 </ul>
 
                 <div className='flex flex-center gap-4'>
-                    <button>
-                        <Image src={assets.moon_icon} alt='' className='w-6' />
+                    <button onClick={() => setIsDarkMode(prev => !prev)}>
+                        <Image src={isDarkMode ? assets.sun_icon : assets.moon_icon} alt='' className='w-6' />
                     </button>
-                    <a href="#contact" className='hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4 font-Ovo font-semibold'>Contact <Image alt='' src={assets.arrow_icon} className='w-3' /> </a>
+                    <a href="#contact" className='hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4 font-Ovo font-semibold dark:border-white/50'>Contact <Image alt='' src={isDarkMode ? assets.arrow_icon_dark : assets.arrow_icon} className='w-3' /> </a>
                     <button className='block md:hidden' onClick={openMenu}>
-                        <Image src={assets.menu_black} alt='' className='w-6' />
+                        <Image src={isDarkMode ? assets.menu_white : assets.menu_black} alt='' className='w-6' />
                     </button>
                 </div>
 
                 {/* For mobile */}
 
-                <ul ref={sideMenuRef} className='flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-400'>
+                <ul ref={sideMenuRef} className='flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500 bg-transparent backdrop-blur-xl dark:bg-darkHover dark:text-white dark:bg-transparent dark:backdrop-blur-xl'>
 
-                    <div className='absolute right-6 top-6' onClick={closeMenu}>
-                        <Image src={assets.close_black} alt='' className='w-5 cursor-pointer' />
+                    <div className='absolute right-6 top-6 ' onClick={closeMenu}>
+                        <Image src={isDarkMode ? assets.close_white : assets.close_black} alt='' className='w-5 cursor-pointer' />
                     </div>
 
                     <li><a href="#top" className='font-Ovo' onClick={closeMenu}>Home</a></li>
