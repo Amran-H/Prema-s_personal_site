@@ -1,37 +1,15 @@
-// import { assets } from '@/assets/assets';
-// import Image from 'next/image';
-// import React from 'react';
-
-// const Header = () => {
-//     return (
-//         <div className='w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4'>
-//             <div>
-//                 <Image src={assets.my_image} alt='' className='rounded-full w-32 bg-gray-200' />
-//             </div>
-//             <h3 className='flex items-end gap-2 text-xl md:text-2xl mb-3 font-Ovo'>
-//                 Hi! I'm Amran Hossain <Image src={assets.hand_icon} alt='' className='rounded-full w-6 mx-2 mb-1' />
-
-//             </h3>
-//             <h1 className='text-3xl sm:text-6xl lg:tex-[66px] font-Ovo'>Passionate Web Developer</h1>
-//             <p className='max-w-2xl mx-auto font-Ovo'>I Like to explore and challenge my expertise. My aim is to be comfortable with always-changing technologies by learning new technologies that my work demands conveniently and efficiently. And as a fast learner, I enjoy learning new things.</p>
-//             <div className='flex flex-col sm:flex-row items-center gap-4 mt-4'>
-//                 <a href="#contact" className='px-10 py-3 border border-white rounded-full bg-black flex items-center gap-2 text-white'> Contact me <Image src={assets.right_arrow_white} alt='' className='w-4' /></a>
-//                 <a href="/sample-resume.pdf" download className='px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2'> My resume <Image src={assets.download_icon} alt='' className='w-4' /></a>
-//             </div>
-//         </div>
-//     );
-// };
-
-// export default Header;
-
 import { assets } from '@/assets/assets';
 import Image from 'next/image';
 import React from 'react';
 import { motion } from 'motion/react';
+import { FaHandPeace, FaDownload } from 'react-icons/fa';
+import { BsArrowRight } from 'react-icons/bs';
+import Typewriter from 'typewriter-effect';
+
 
 const Header = () => {
     return (
-        <div className='w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4'>
+        <div className='w-11/12 max-w-5xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4'>
             {/* Profile Image */}
             <motion.div
                 initial={{ scale: 0 }}
@@ -53,7 +31,7 @@ const Header = () => {
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
             >
-                Hi! I'm Amran Hossain
+                Hello! Myself Amran
                 <motion.img
                     src="/hand-icon.png"
                     alt='Hand Icon'
@@ -65,12 +43,25 @@ const Header = () => {
             </motion.h3>
 
             {/* Title */}
-            <motion.h1 className='text-3xl sm:text-6xl lg:text-[66px] font-Ovo'
+            <motion.h1 className='text-xl sm:text-6xl lg:text-[62px] font-Ovo  flex items-center justify-center'
                 initial={{ y: -30, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.5 }}
             >
-                Passionate Web Developer
+                <Typewriter
+                    options={{
+                        strings: [
+                            'I am a Passionate Web Developer',
+                            'I am a Fast Learner',
+                            'I Aim to Innovate and Explore'
+                        ],
+                        autoStart: true,
+                        loop: true,
+                        typeSpeed: 20,
+                        deleteSpeed: 20,
+                        delaySpeed: 1000,
+                    }}
+                />
             </motion.h1>
 
             {/* Description */}
@@ -86,21 +77,38 @@ const Header = () => {
 
             {/* Buttons */}
             <div className='flex flex-col sm:flex-row items-center gap-4 mt-4'>
-
                 <motion.a
                     initial={{ y: 30, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.6, delay: 1 }}
-                    href="#contact" className='px-10 py-3 border border-white rounded-full bg-black flex items-center gap-2 text-white dark:bg-transparent'>
-                    Contact me <Image src={assets.right_arrow_white} alt='Arrow' width={16} height={16} />
+                    href="#contact"
+                    className='group relative px-10 py-3 border border-white rounded-full 
+                    bg-black flex items-center gap-2 text-white overflow-hidden
+                    dark:bg-transparent hover:border-blue-500 dark:hover:border-blue-500
+                    transition-all duration-300'
+                >
+                    <span className='absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500
+                    translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-300'></span>
+                    <span className='relative z-10'>Contact me</span>
+                    <BsArrowRight className="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform duration-300" />
                 </motion.a>
 
                 <motion.a
                     initial={{ y: 30, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.6, delay: 1.2 }}
-                    href="/sample-resume.pdf" download className='px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 bg-white dark:text-black'>
-                    My resume <Image src={assets.download_icon} alt='Download Icon' width={16} height={16} />
+                    href="https://drive.google.com/file/d/1EseGxweB-20X71fyKcCR5Bk8DmKQbfGF/view"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className='group relative px-10 py-3 border rounded-full border-gray-500 
+                    flex items-center gap-2 bg-white overflow-hidden
+                    hover:border-blue-500 transition-all duration-300
+                    dark:bg-white dark:text-black dark:border-gray-400'
+                >
+                    <span className='absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500
+                    translate-y-[100%] group-hover:translate-y-0 transition-transform duration-300'></span>
+                    <span className='relative z-10 group-hover:text-white transition-colors duration-300'>My resume</span>
+                    <FaDownload className="w-4 h-4 relative z-10 group-hover:text-white transition-all duration-300" />
                 </motion.a>
             </div>
         </div>

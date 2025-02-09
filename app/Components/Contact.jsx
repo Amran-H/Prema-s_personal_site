@@ -2,6 +2,8 @@ import { assets } from '@/assets/assets';
 import Image from 'next/image';
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
+import { BsArrowRight } from 'react-icons/bs';
+import toast, { Toaster } from 'react-hot-toast';
 
 const Contact = () => {
 
@@ -9,24 +11,42 @@ const Contact = () => {
 
     const onSubmit = async (event) => {
         event.preventDefault();
-        setResult("Sending....");
-        const formData = new FormData(event.target);
 
+        // Show loading toast
+        const loadingToast = toast.loading('Sending message...');
+
+        const formData = new FormData(event.target);
         formData.append("access_key", process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY);
 
-        const response = await fetch("https://api.web3forms.com/submit", {
-            method: "POST",
-            body: formData
-        });
+        try {
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData
+            });
 
-        const data = await response.json();
+            const data = await response.json();
 
-        if (data.success) {
-            setResult("Form Submitted Successfully");
-            event.target.reset();
-        } else {
-            console.log("Error", data);
-            setResult(data.message);
+            if (data.success) {
+                // Success toast
+                toast.success('Message sent successfully!', {
+                    duration: 3000,
+                    position: 'top-center',
+                });
+                event.target.reset();
+            } else {
+                // Error toast
+                toast.error(data.message || 'Something went wrong!', {
+                    duration: 3000,
+                    position: 'top-center',
+                });
+            }
+        } catch (error) {
+            toast.error('Failed to send message', {
+                duration: 3000,
+                position: 'top-center',
+            });
+        } finally {
+            toast.dismiss(loadingToast);
         }
     };
 
@@ -36,6 +56,8 @@ const Contact = () => {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1 }}
             id='contact' className='w-full px-[12%] py-10 scroll-mt-20 bg-[url("/footer-bg-color.png")] bg-no-repeat bg-center bg-[length:90%_auto] dark:bg-none'>
+
+            <Toaster />
 
             <motion.h4
                 initial={{ y: -20, opacity: 0 }}
@@ -83,9 +105,19 @@ const Contact = () => {
                 <motion.button
                     whileHover={{ scale: 1.05 }}
                     transition={{ duration: 0.1 }}
-                    type='submit' className='py-3 px-8 w-max flex items-center justify-center gap-2 bg-black/80 text-white rounded-full mx-auto border-[0.5px] hover:bg-black duration-500 dark:bg-transparent dark:border-[0.5px] dark:hover:bg-darkHover'>Submit Now <Image src={assets.right_arrow_white} alt='' className='w-4' /> </motion.button>
+                    type='submit'
+                    className='group relative py-3 px-8 w-max flex items-center justify-center gap-2 
+                    bg-black/80 text-white rounded-full mx-auto border-[0.5px] overflow-hidden
+                    hover:border-blue-500 dark:border-white/50 dark:hover:border-blue-500
+                    dark:bg-transparent transition-all duration-300'
+                >
+                    <span className='absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500
+                    translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-300'></span>
+                    <span className='relative z-10'>Submit Now</span>
+                    <BsArrowRight className="w-4 h-4 text-white relative z-10 
+                    group-hover:translate-x-1 transition-transform duration-300" />
+                </motion.button>
 
-                <p className='mt-4'>{result}</p>
             </motion.form>
         </motion.div>
     );

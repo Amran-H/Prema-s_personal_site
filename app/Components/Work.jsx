@@ -1,9 +1,36 @@
-import { assets, workData } from '@/assets/assets';
-import Image from 'next/image';
+import { workData } from '@/assets/assets';
 import React from 'react';
 import { motion } from 'motion/react';
+import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { SiVercel } from 'react-icons/si';
+import { FaReact, FaNode, FaHtml5, FaCss3Alt, FaBootstrap } from 'react-icons/fa';
+import { SiJavascript, SiTailwindcss, SiMongodb, SiExpress, SiNextdotjs, SiFirebase, SiTypescript, SiRedux, SiMaterialdesign, SiChakraui } from 'react-icons/si';
+import Image from 'next/image';
 
-const Work = ({ isDarkMode }) => {
+// Enhanced icon mapping with colors
+const getTechIcon = (techName) => {
+    const iconMap = {
+        'React': { icon: FaReact, color: '#61DAFB' },
+        'Node.js': { icon: FaNode, color: '#339933' },
+        'HTML': { icon: FaHtml5, color: '#E34F26' },
+        'CSS': { icon: FaCss3Alt, color: '#1572B6' },
+        'JavaScript': { icon: SiJavascript, color: '#F7DF1E' },
+        'TypeScript': { icon: SiTypescript, color: '#3178C6' },
+        'Bootstrap': { icon: FaBootstrap, color: '#7952B3' },
+        'Tailwind': { icon: SiTailwindcss, color: '#06B6D4' },
+        'MongoDB': { icon: SiMongodb, color: '#47A248' },
+        'Express.js': { icon: SiExpress, color: '#000000' },
+        'Next.js': { icon: SiNextdotjs, color: '#000000' },
+        'Firebase': { icon: SiFirebase, color: '#FFCA28' },
+        'Redux': { icon: SiRedux, color: '#764ABC' },
+        'Material-UI': { icon: SiMaterialdesign, color: '#007FFF' },
+        'Chakra UI': { icon: SiChakraui, color: '#319795' }
+    };
+
+    return iconMap[techName] || { icon: FaReact, color: '#61DAFB' };
+};
+
+const Work = () => {
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -20,51 +47,114 @@ const Work = ({ isDarkMode }) => {
             <motion.h2
                 initial={{ y: -20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.5 }} className='text-center text-5xl font-Ovo'>My Recent Works</motion.h2>
+                transition={{ duration: 0.5, delay: 0.5 }}
+                className='text-center text-5xl font-Ovo'>My Recent Works</motion.h2>
+
             <motion.p
                 initial={{ y: -20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.7 }}
-                className='text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo'>As a certified MERN stack web developer with 3 years of experience these are some of my works. </motion.p>
+                className='text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo'>
+                As a certified MERN stack web developer with 3 years of experience these are some of my works.
+            </motion.p>
 
             <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ duration: 0.6, delay: 0.9 }}
-                className='grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-4 my-10 gap-5 dark:text-black'>
-                {
-                    workData.map((project, index) => (
-                        <motion.div
-                            whileHover={{ scale: 1.05 }}
-                            transition={{ duration: 0.3 }}
-                            key={index}
-                            className='aspect-square bg-no-repeat bg-center bg-cover rounded-lg relative cursor-pointer group'
-                            style={{ backgroundImage: `url(${project.bgImage})` }}
-                        >
-                            <div className='bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7'>
-                                <div>
-                                    <h2 className='font-semibold'>{project.title}</h2>
-                                    <p className='text-sm text-gray-700'>{project.description}</p>
-                                </div>
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.7 }}
+                className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 my-10 gap-8'>
+                {workData.map((project, index) => (
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        whileHover={{ y: -12 }}
+                        transition={{ duration: 0.3 }}
+                        key={index}
+                        className='relative bg-white/50 backdrop-blur-sm rounded-2xl border border-gray-200
+                        shadow-lg shadow-gray-200 overflow-hidden group
+                        dark:bg-gray-900/50 dark:border-gray-700 dark:shadow-gray-900'
+                    >
+                        <div className='relative h-48 overflow-hidden'>
+                            <Image
+                                src={project.bgImage}
+                                alt={project.title}
+                                fill
+                                className='object-cover object-center transform group-hover:scale-110 transition-transform duration-500'
+                            />
 
-                                <div className='border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition'>
-                                    <Image src={assets.send_icon} alt='' className='w-5' />
+
+                            <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 
+                flex items-center justify-center gap-6 translate-y-full
+                group-hover:translate-y-0 transition-all duration-300">
+
+                                {/* GitHub Button */}
+                                <a href={project.github} target="_blank" rel="noopener noreferrer"
+                                    className="px-6 py-3 flex items-center gap-3 bg-gray-800 text-white rounded-lg
+                   hover:bg-gray-700 transition-all duration-300 shadow-md hover:scale-105">
+                                    <FaGithub className="w-6 h-6" />
+                                    <span className="text-sm font-semibold">GitHub</span>
+                                </a>
+
+                                {/* Live Demo Button */}
+                                <a href={project.demo} target="_blank" rel="noopener noreferrer"
+                                    className="px-6 py-3 flex items-center gap-3 bg-blue-600 text-white rounded-lg
+                   hover:bg-blue-500 transition-all duration-300 shadow-md hover:scale-105">
+                                    <SiVercel className="w-6 h-6" />
+                                    <span className="text-sm font-semibold">Live Demo</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div className='p-6'>
+                            <h3 className='text-xl font-semibold mb-2 text-gray-800 dark:text-white
+                                group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300'>
+                                {project.title}
+                            </h3>
+                            <p className='text-gray-600 dark:text-gray-300 mb-4'>
+                                {project.description}
+                            </p>
+
+                            <div className='space-y-3'>
+                                <p className='text-sm font-medium text-gray-700 dark:text-gray-300'>
+                                    Technologies Used:
+                                </p>
+                                <div className='flex flex-wrap items-center gap-3'>
+                                    {project.technologies?.map((tech, idx) => {
+                                        const { icon: TechIcon, color } = getTechIcon(tech);
+                                        return (
+                                            <div key={idx}
+                                                className='w-8 h-8 rounded-full flex items-center justify-center
+                                                bg-gray-100 dark:bg-gray-800 group/tech cursor-pointer
+                                                hover:scale-110 transition-all duration-300'
+                                                title={tech}
+                                            >
+                                                <TechIcon
+                                                    className="w-5 h-5 transition-colors duration-300"
+                                                    style={{ color }}
+                                                />
+                                            </div>
+                                        );
+                                    })}
                                 </div>
                             </div>
-                        </motion.div>
-                    ))
-                }
+                        </div>
+                    </motion.div>
+                ))}
             </motion.div>
 
-            <div >
-                <motion.a
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ duration: 0.5, delay: 1.1 }}
-                    href="" className='w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px] border-gray-700 rounded-full py-3 px-10  my-16 hover:bg-lightHover duration-500 mx-auto dark:text-white dark:border-white dark:hover:bg-darkHover'>
-                    Show More <Image src={isDarkMode ? assets.right_arrow_bold_dark : assets.right_arrow_bold} alt='' className='w-4' />
-                </motion.a>
-            </div>
+            <motion.a
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                whileHover={{ gap: '1rem' }}
+                transition={{ duration: 0.5, delay: 1.1 }}
+                href="https://github.com/Amran-H"
+                target="_blank"
+                rel="noopener noreferrer"
+                className='w-max flex items-center gap-2 text-gray-700 border-[0.5px] border-gray-700 
+                rounded-full py-3 px-10 my-16 hover:bg-blue-50 duration-500 mx-auto
+                dark:text-white dark:border-white dark:hover:bg-blue-900/30'>
+                Show More <FaExternalLinkAlt className="w-4 h-4" />
+            </motion.a>
         </motion.div>
     );
 };

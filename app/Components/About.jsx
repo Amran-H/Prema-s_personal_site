@@ -1,7 +1,10 @@
-import { assets, infoList, toolsData } from '@/assets/assets';
+import { assets, infoList } from '@/assets/assets';
 import Image from 'next/image';
+import user from '../../public/user-1.png';
 import React from 'react';
 import { motion } from 'motion/react';
+import { FaReact, FaNodeJs, FaGit, FaHtml5, FaCss3Alt, FaBootstrap } from 'react-icons/fa';
+import { SiMongodb, SiExpress, SiTailwindcss, SiJavascript } from 'react-icons/si';
 
 const About = ({ isDarkMode }) => {
     return (
@@ -25,13 +28,13 @@ const About = ({ isDarkMode }) => {
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.8 }}
-                className='flex w-full flex-col lg:flex-row items-center gap-20 my-20'>
+                className='flex w-full flex-col lg:flex-row items-center gap-10 lg:gap-20 my-20'>
                 <motion.div
                     initial={{ opacity: 0, scale: 0.9 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.6 }}
-                    className='w-64 sm:w-80 rounded-3xl max-w-none'>
-                    <Image src={assets.user_image} alt='user' className='w-full rounded-3xl' />
+                    className='w-64 sm:w-72 lg:w-[320px] flex-shrink-0'>
+                    <Image src={user} alt='user' className='w-full rounded-3xl' />
                 </motion.div>
                 <motion.div
                     initial={{ opacity: 0 }}
@@ -44,18 +47,44 @@ const About = ({ isDarkMode }) => {
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         transition={{ duration: 0.8, delay: 1 }}
-                        className='grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl'>
+                        className='grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl '>
                         {
                             infoList.map(({ icon, iconDark, title, description }, index) => (
                                 <motion.li
                                     whileHover={{ scale: 1.05 }}
                                     key={index}
-                                    className='border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-lightHover
-                                    hover:-translate-y-4 duration-500 hover:shadow-black
-                                     text-center dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50'  >
-                                    <Image src={isDarkMode ? iconDark : icon} alt='title' className='w-7 mt-3 mx-auto ' />
-                                    <h3 className='my-4 font-semibold text-gray-700 dark:text-white'>{title}</h3>
-                                    <p className='text-gray-600 text-sm dark:text-white/80'>{description}</p>
+                                    className='relative overflow-hidden bg-white/50 backdrop-blur-sm border-[0.5px] 
+                                    border-gray-100 shadow-md  rounded-2xl p-6 cursor-pointer 
+                                    hover:-translate-y-2 duration-300 
+                                    hover:shadow-xl hover:shadow-gray-200
+                                    group
+                                    dark:bg-gray-900/50 dark:border-gray-900 
+                                    dark:hover:shadow-gray-900 dark:shadow-gray-600'>
+                                    <div className='absolute inset-0 bg-gradient-to-r from-blue-50 to-indigo-50 
+                                    opacity-0 group-hover:opacity-100 transition-opacity duration-300
+
+                                    dark:from-blue-950/30 dark:to-indigo-950/30'></div>
+
+                                    <div className='relative z-10'>
+                                        <div className='bg-blue-50 rounded-xl w-12 h-12 flex items-center justify-center mb-4
+                                        group-hover:bg-blue-100 dark:group-hover:bg-black transition-colors duration-300
+                                        dark:bg-gray-800'>
+                                            <Image
+                                                src={isDarkMode ? iconDark : icon}
+                                                alt={title}
+                                                className='w-6 h-6'
+                                            />
+                                        </div>
+                                        <h3 className='mb-3 py-3 text-lg font-semibold text-gray-800 
+                                        group-hover:text-blue-600 transition-colors duration-300
+                                        dark:text-white dark:group-hover:text-blue-400'>
+                                            {title}
+                                        </h3>
+                                        <p className='text-gray-600 text-sm leading-relaxed
+                                        dark:text-gray-300'>
+                                            {description}
+                                        </p>
+                                    </div>
                                 </motion.li>
                             ))
                         }
@@ -64,22 +93,41 @@ const About = ({ isDarkMode }) => {
                         initial={{ y: 20, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}
                         transition={{ duration: 0.5, delay: 1.3 }}
-
-                        className='my-6 text-gray-700 font-Ovo dark:text-white'>Tools I use</motion.h4>
+                        className='my-6 text-gray-700 font-Ovo dark:text-white'>
+                        Tools I use
+                    </motion.h4>
                     <motion.ul
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         transition={{ duration: 0.6, delay: 1.5 }}
-                        className='flex items-center gap-3 sm:gap-5'>
-                        {
-                            toolsData.map((tool, index) => (
-                                <motion.li
-                                    whileHover={{ scale: 1.1 }}
-                                    className='flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-motion.4 duration-500 '
-                                    key={index}
-                                ><Image src={tool} alt='tool' className='w-5 sm:w-7' /></motion.li>
-                            ))
-                        }
+                        className='flex flex-wrap items-center gap-3 sm:gap-4'>
+                        <motion.li whileHover={{ scale: 1.1 }} className='flex items-center justify-center border-[0.5px] border-gray-400 rounded-full shadow-lg shadow-gray-400 p-5 cursor-pointer hover:scale-110 ease-in duration-300'>
+                            <FaReact className="w-5 h-5 text-[#61DAFB] " />
+                        </motion.li>
+                        <motion.li whileHover={{ scale: 1.1 }} className='flex items-center justify-center border-[0.5px] border-gray-400 rounded-full shadow-lg shadow-gray-400 p-5 cursor-pointer hover:scale-110 ease-in duration-300'>
+                            <FaNodeJs className="w-5 h-5 text-[#339933]" />
+                        </motion.li>
+                        <motion.li whileHover={{ scale: 1.1 }} className='flex items-center justify-center border-[0.5px] border-gray-400 rounded-full shadow-lg shadow-gray-400 p-5 cursor-pointer hover:scale-110 ease-in duration-300'>
+                            <SiMongodb className="w-5 h-5 text-[#47A248]" />
+                        </motion.li>
+                        <motion.li whileHover={{ scale: 1.1 }} className='flex items-center justify-center border-[0.5px] border-gray-400 rounded-full shadow-lg shadow-gray-400 p-5 cursor-pointer hover:scale-110 ease-in duration-300'>
+                            <SiExpress className="w-5 h-5" />
+                        </motion.li>
+                        <motion.li whileHover={{ scale: 1.1 }} className='flex items-center justify-center border-[0.5px] border-gray-400 rounded-full shadow-lg shadow-gray-400 p-5 cursor-pointer hover:scale-110 ease-in duration-300'>
+                            <FaHtml5 className="w-5 h-5 text-[#E34F26]" />
+                        </motion.li>
+                        <motion.li whileHover={{ scale: 1.1 }} className='flex items-center justify-center border-[0.5px] border-gray-400 rounded-full shadow-lg shadow-gray-400 p-5 cursor-pointer hover:scale-110 ease-in duration-300'>
+                            <FaCss3Alt className="w-5 h-5 text-[#1572B6]" />
+                        </motion.li>
+                        <motion.li whileHover={{ scale: 1.1 }} className='flex items-center justify-center border-[0.5px] border-gray-400 rounded-full shadow-lg shadow-gray-400 p-5 cursor-pointer hover:scale-110 ease-in duration-300'>
+                            <SiJavascript className="w-5 h-5 text-[#F7DF1E]" />
+                        </motion.li>
+                        <motion.li whileHover={{ scale: 1.1 }} className='flex items-center justify-center border-[0.5px] border-gray-400 rounded-full shadow-lg shadow-gray-400 p-5 cursor-pointer hover:scale-110 ease-in duration-300'>
+                            <SiTailwindcss className="w-5 h-5 text-[#06B6D4]" />
+                        </motion.li>
+                        <motion.li whileHover={{ scale: 1.1 }} className='flex items-center justify-center border-[0.5px] border-gray-400 rounded-full shadow-lg shadow-gray-400 p-5 cursor-pointer hover:scale-110 ease-in duration-300'>
+                            <FaGit className="w-5 h-5 text-[#F05032]" />
+                        </motion.li>
                     </motion.ul>
                 </motion.div>
             </motion.div>

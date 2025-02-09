@@ -4,6 +4,15 @@
 
 * {
   font-family: Outfit;
+
   /* max-width: 1280px; */
   /* margin: auto */
+  .Typewriter__wrapper {
+    font-family: 'Ovo', serif !important;
+  }
+
+  .Typewriter__cursor {
+    font-family: 'Ovo', serif !important;
+  }
+
 }

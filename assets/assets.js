@@ -75,31 +75,71 @@ export const assets = {
     right_arrow,
     send_icon,
     right_arrow_bold,
-    right_arrow_bold_dark
+    right_arrow_bold_dark,
 };
 
 export const workData = [
     {
-        title: 'Frontend project',
-        description: 'Web Design',
+        title: "Bistro Boss Restaurant",
+        description: "A full-stack restaurant management system with user and admin dashboards, online ordering, and payment integration.",
         bgImage: '/work-1.png',
+        github: "https://github.com/yourusername/bistro-boss",
+        demo: "https://bistro-boss-demo.vercel.app",
+        technologies: [
+            "React",
+            "Node.js",
+            "MongoDB",
+            "Express.js",
+            "Tailwind",
+            "Firebase"
+        ]
     },
     {
-        title: 'Geo based app',
-        description: 'Mobile App',
+        title: "Toy Marketplace",
+        description: "An e-commerce platform for toy sellers with authentication, CRUD operations, and responsive design.",
         bgImage: '/work-2.png',
+        github: "https://github.com/yourusername/toy-marketplace",
+        demo: "https://toy-marketplace-demo.vercel.app",
+        technologies: [
+            "React",
+            "Node.js",
+            "MongoDB",
+            "Express.js",
+            "Tailwind",
+            "Firebase"
+        ]
     },
     {
-        title: 'Photography site',
-        description: 'Web Design',
+        title: "Summer Camp School",
+        description: "A learning management system for summer camps with student, instructor, and admin roles.",
         bgImage: '/work-3.png',
+        github: "https://github.com/yourusername/summer-camp",
+        demo: "https://summer-camp-demo.vercel.app",
+        technologies: [
+            "React",
+            "Next.js",
+            "MongoDB",
+            "Express.js",
+            "Tailwind",
+            "Firebase"
+        ]
     },
     {
-        title: 'UI/UX designing',
-        description: 'UI/UX Design',
+        title: "Career Hub Platform",
+        description: "A job search platform with advanced filtering, application tracking, and resume builder functionality.",
         bgImage: '/work-4.png',
-    },
-]
+        github: "https://github.com/yourusername/career-hub",
+        demo: "https://career-hub-demo.vercel.app",
+        technologies: [
+            "React",
+            "Redux",
+            "Node.js",
+            "MongoDB",
+            "Express.js",
+            "Material-UI"
+        ]
+    }
+];
 
 export const serviceData = [
     { icon: assets.web_icon, title: 'Web design', description: 'Web development is the process of building, programming...', link: '' },
