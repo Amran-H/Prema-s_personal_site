@@ -1,5 +1,4 @@
-import { workData } from '@/assets/assets';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'motion/react';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import { SiVercel } from 'react-icons/si';
@@ -31,6 +30,14 @@ const getTechIcon = (techName) => {
 };
 
 const Work = () => {
+    const [workData, setWorkData] = useState([]);
+
+    useEffect(() => {
+        fetch('/data/workData.json')
+            .then(res => res.json())
+            .then(data => setWorkData(data));
+    }, []);
+
     return (
         <motion.div
             initial={{ opacity: 0 }}
