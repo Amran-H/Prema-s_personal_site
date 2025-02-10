@@ -1,12 +1,35 @@
-import { assets, infoList } from '@/assets/assets';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import user from '../../public/user-1.png';
 import React from 'react';
 import { motion } from 'motion/react';
 import { FaReact, FaNodeJs, FaGit, FaHtml5, FaCss3Alt, FaBootstrap } from 'react-icons/fa';
 import { SiMongodb, SiExpress, SiTailwindcss, SiJavascript } from 'react-icons/si';
+import { FaCode, FaGraduationCap, FaProjectDiagram } from 'react-icons/fa';
 
 const About = ({ isDarkMode }) => {
+    const [infoList, setInfoList] = useState([]);
+
+    useEffect(() => {
+        fetch('/data/infoList.json')
+            .then(res => res.json())
+            .then(data => setInfoList(data));
+    }, []);
+
+    const getIcon = (iconType) => {
+        const iconClass = "w-6 h-6 text-blue-600 dark:text-blue-400";
+        switch (iconType) {
+            case 'code':
+                return <FaCode className={iconClass} />;
+            case 'education':
+                return <FaGraduationCap className={iconClass} />;
+            case 'projects':
+                return <FaProjectDiagram className={iconClass} />;
+            default:
+                return null;
+        }
+    };
+
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -49,12 +72,12 @@ const About = ({ isDarkMode }) => {
                         transition={{ duration: 0.8, delay: 1 }}
                         className='grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl '>
                         {
-                            infoList.map(({ icon, iconDark, title, description }, index) => (
+                            infoList.map(({ iconType, title, description }, index) => (
                                 <motion.li
                                     whileHover={{ scale: 1.05 }}
                                     key={index}
                                     className='relative overflow-hidden bg-white/50 backdrop-blur-sm border-[0.5px] 
-                                    border-gray-100 shadow-md  rounded-2xl p-6 cursor-pointer 
+                                    border-gray-100 shadow-md rounded-2xl p-6 cursor-pointer 
                                     hover:-translate-y-2 duration-300 
                                     hover:shadow-xl hover:shadow-gray-200
                                     group
@@ -62,18 +85,13 @@ const About = ({ isDarkMode }) => {
                                     dark:hover:shadow-gray-900 dark:shadow-gray-600'>
                                     <div className='absolute inset-0 bg-gradient-to-r from-blue-50 to-indigo-50 
                                     opacity-0 group-hover:opacity-100 transition-opacity duration-300
-
                                     dark:from-blue-950/30 dark:to-indigo-950/30'></div>
 
                                     <div className='relative z-10'>
                                         <div className='bg-blue-50 rounded-xl w-12 h-12 flex items-center justify-center mb-4
                                         group-hover:bg-blue-100 dark:group-hover:bg-black transition-colors duration-300
                                         dark:bg-gray-800'>
-                                            <Image
-                                                src={isDarkMode ? iconDark : icon}
-                                                alt={title}
-                                                className='w-6 h-6'
-                                            />
+                                            {getIcon(iconType)}
                                         </div>
                                         <h3 className='mb-3 py-3 text-lg font-semibold text-gray-800 
                                         group-hover:text-blue-600 transition-colors duration-300

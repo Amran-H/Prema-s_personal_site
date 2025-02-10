@@ -1,0 +1,17 @@
+[
+    {
+        "title": "Languages",
+        "description": "HTML, CSS, JavaScript React Js, Next Js",
+        "iconType": "code"
+    },
+    {
+        "title": "Education",
+        "description": "B.Tech in Computer Science",
+        "iconType": "education"
+    },
+    {
+        "title": "Projects",
+        "description": "Built more than 5 projects",
+        "iconType": "projects"
+    }
+]
