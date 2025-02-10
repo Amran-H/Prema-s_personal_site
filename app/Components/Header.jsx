@@ -80,7 +80,7 @@ const Header = () => {
                 <motion.a
                     initial={{ y: 30, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 0.6, delay: 1 }}
+                    transition={{ duration: 0.4, delay: 0.8 }}
                     href="#contact"
                     className='group relative px-10 py-3 border border-white rounded-full 
                     bg-black flex items-center gap-2 text-white overflow-hidden
@@ -96,7 +96,7 @@ const Header = () => {
                 <motion.a
                     initial={{ y: 30, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 0.6, delay: 1.2 }}
+                    transition={{ duration: 0.4, delay: 0.9 }}
                     href="https://drive.google.com/file/d/1EseGxweB-20X71fyKcCR5Bk8DmKQbfGF/view"
                     target="_blank"
                     rel="noopener noreferrer"

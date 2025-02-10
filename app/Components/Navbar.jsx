@@ -47,8 +47,8 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
                             <Icons.SunIcon className=" text-black" />
                         )}
                     </button>
-                    <a href="#contact" className='hidden lg:flex items-center gap-3 px-9 py-2 border border-gray-500 rounded-full ml-4 font-Ovo font-semibold dark:border-white/50'>
-                        Contact <BsArrowUpRightCircleFill className="w-5 text-4xl " />
+                    <a href="#contact" className='hidden group lg:flex items-center gap-3 px-9 py-2 border border-gray-500 rounded-full ml-4 font-Ovo font-semibold dark:border-white/50'>
+                        Contact <BsArrowUpRightCircleFill className="w-5 text-4xl relative z-10 transition-transform duration-300 group-hover:rotate-[133deg]" />
                     </a>
                     <button className='block md:hidden' onClick={openMenu}>
                         {isDarkMode ?

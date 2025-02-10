@@ -142,19 +142,27 @@ const Work = () => {
                 ))}
             </motion.div>
 
+
             <motion.a
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                whileHover={{ gap: '1rem' }}
-                transition={{ duration: 0.5, delay: 1.1 }}
-                href="https://github.com/Amran-H"
+                transition={{ duration: 0.2, delay: 0.3 }}
+                href="https://drive.google.com/file/d/1EseGxweB-20X71fyKcCR5Bk8DmKQbfGF/view"
                 target="_blank"
                 rel="noopener noreferrer"
-                className='w-max flex items-center gap-2 text-gray-700 border-[0.5px] border-gray-700 
-                rounded-full py-3 px-10 my-16 hover:bg-blue-50 duration-500 mx-auto
-                dark:text-white dark:border-white dark:hover:bg-blue-900/30'>
-                Show More <FaExternalLinkAlt className="w-4 h-4" />
+                className='group relative w-max mx-auto px-10 py-3 border rounded-full border-gray-500 
+                    flex items-center gap-2 bg-white overflow-hidden
+                    hover:border-blue-500 transition-all duration-300
+                    dark:bg-white dark:text-black dark:border-gray-400'
+            >
+                <span className='absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500
+                    translate-y-[100%] group-hover:translate-y-0 transition-transform duration-300'></span>
+                <span className='relative z-10 group-hover:text-white transition-colors duration-300'> Show More</span>
+                <FaExternalLinkAlt className="w-4 h-4 relative z-10 transition-transform duration-300 group-hover:rotate-45 group-hover:text-white " />
             </motion.a>
+
+
+
         </motion.div>
     );
 };
