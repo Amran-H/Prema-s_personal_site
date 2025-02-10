@@ -92,14 +92,14 @@ const About = ({ isDarkMode }) => {
                     <motion.h4
                         initial={{ y: 20, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}
-                        transition={{ duration: 0.5, delay: 1.1 }}
+                        transition={{ duration: 0.5, delay: 0.8 }}
                         className='my-6 text-gray-700 font-Ovo dark:text-white'>
                         Tools I use
                     </motion.h4>
                     <motion.ul
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
-                        transition={{ duration: 0.6, delay: 1.2 }}
+                        transition={{ duration: 0.6, delay: 0.9 }}
                         className='flex flex-wrap items-center gap-3 sm:gap-4'>
                         <motion.li whileHover={{ scale: 1.1 }} className='flex items-center justify-center border-[0.5px] border-gray-400 rounded-full shadow-lg shadow-gray-400 p-5 cursor-pointer hover:scale-110 ease-in duration-300'>
                             <FaReact className="w-5 h-5 text-[#61DAFB] " />
