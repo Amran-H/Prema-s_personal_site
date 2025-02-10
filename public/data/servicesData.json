@@ -1,0 +1,40 @@
+[
+    {
+        "title": "Web Development",
+        "description": "I create responsive and dynamic web applications using modern technologies like React, Next.js, and Node.js. Focusing on clean code, performance, and user experience.",
+        "features": [
+            {
+                "iconName": "FaLaptopCode",
+                "text": "Custom Web Applications"
+            },
+            {
+                "iconName": "FaDesktop",
+                "text": "Responsive Design"
+            },
+            {
+                "iconName": "FaCode",
+                "text": "Clean & Optimized Code"
+            }
+        ],
+        "mainIconName": "FaCode"
+    },
+    {
+        "title": "UI/UX Design",
+        "description": "I design intuitive and engaging user interfaces with a focus on user experience. Creating visually appealing designs that enhance user interaction and satisfaction.",
+        "features": [
+            {
+                "iconName": "FaFigma",
+                "text": "Figma Design"
+            },
+            {
+                "iconName": "FaPalette",
+                "text": "UI Components"
+            },
+            {
+                "iconName": "FaSwatchbook",
+                "text": "Design Systems"
+            }
+        ],
+        "mainIconName": "FaPaintBrush"
+    }
+]

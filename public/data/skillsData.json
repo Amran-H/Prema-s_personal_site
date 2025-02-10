@@ -1,0 +1,101 @@
+[
+    {
+        "category": "Frontend Development",
+        "skills": [
+            {
+                "iconName": "FaHtml5",
+                "name": "HTML5",
+                "level": "95%",
+                "color": "#E34F26"
+            },
+            {
+                "iconName": "FaCss3Alt",
+                "name": "CSS3",
+                "level": "90%",
+                "color": "#1572B6"
+            },
+            {
+                "iconName": "SiJavascript",
+                "name": "JavaScript",
+                "level": "85%",
+                "color": "#F7DF1E"
+            },
+            {
+                "iconName": "FaReact",
+                "name": "React.js",
+                "level": "90%",
+                "color": "#61DAFB"
+            },
+            {
+                "iconName": "SiNextdotjs",
+                "name": "Next.js",
+                "level": "85%",
+                "color": "#000000"
+            },
+            {
+                "iconName": "SiRedux",
+                "name": "Redux",
+                "level": "80%",
+                "color": "#764ABC"
+            }
+        ]
+    },
+    {
+        "category": "Backend Development",
+        "skills": [
+            {
+                "iconName": "FaNodeJs",
+                "name": "Node.js",
+                "level": "85%",
+                "color": "#339933"
+            },
+            {
+                "iconName": "SiExpress",
+                "name": "Express.js",
+                "level": "85%",
+                "color": "#000000"
+            },
+            {
+                "iconName": "SiMongodb",
+                "name": "MongoDB",
+                "level": "80%",
+                "color": "#47A248"
+            },
+            {
+                "iconName": "FaDatabase",
+                "name": "SQL",
+                "level": "75%",
+                "color": "#4479A1"
+            },
+            {
+                "iconName": "SiFirebase",
+                "name": "Firebase",
+                "level": "80%",
+                "color": "#FFCA28"
+            }
+        ]
+    },
+    {
+        "category": "Tools & Technologies",
+        "skills": [
+            {
+                "iconName": "FaGit",
+                "name": "Git",
+                "level": "85%",
+                "color": "#F05032"
+            },
+            {
+                "iconName": "FaBootstrap",
+                "name": "Bootstrap",
+                "level": "90%",
+                "color": "#7952B3"
+            },
+            {
+                "iconName": "SiTailwindcss",
+                "name": "Tailwind CSS",
+                "level": "95%",
+                "color": "#06B6D4"
+            }
+        ]
+    }
+]
