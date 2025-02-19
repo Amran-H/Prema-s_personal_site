@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'motion/react';
 import { BsArrowRight } from 'react-icons/bs';
 import toast, { Toaster } from 'react-hot-toast';
 
 const Contact = () => {
 
-    const [result, setResult] = useState("");
 
     const onSubmit = async (event) => {
         event.preventDefault();
@@ -80,7 +79,7 @@ const Contact = () => {
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.9 }}
                 onSubmit={onSubmit} className='max-w-2xl mx-auto'>
-                <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mt-10 mb-8'>
+                <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mt-10 mb-8 overflow-hidden'>
 
                     <motion.input
                         initial={{ x: -50, opacity: 0 }}
