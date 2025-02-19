@@ -92,7 +92,7 @@ const Work = () => {
 
                             <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 
                 flex items-center justify-center gap-6 translate-y-full
-                group-hover:translate-y-0 transition-all duration-300">
+                group-hover:translate-y-0 transition-all duration-300 ">
 
                                 {/* GitHub Button */}
                                 <a href={project.github} target="_blank" rel="noopener noreferrer"
@@ -112,7 +112,7 @@ const Work = () => {
                             </div>
                         </div>
 
-                        <div className='p-6'>
+                        <div className='p-6 border-t-2'>
                             <h3 className='text-xl font-semibold mb-2 text-gray-800 dark:text-white
                                 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300'>
                                 {project.title}

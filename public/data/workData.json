@@ -1,10 +1,10 @@
 [
     {
-        "title": "Bistro Boss Restaurant",
-        "description": "A full-stack restaurant management system with user and admin dashboards, online ordering, and payment integration.",
-        "bgImage": "/work-1.png",
-        "github": "https://github.com/yourusername/bistro-boss",
-        "demo": "https://bistro-boss-demo.vercel.app",
+        "title": "Doctors Portal",
+        "description": "Doctors Portal is a responsive website for scheduling doctor appointments. Users must log in to book, view, or manage their schedules. The dashboard displays all appointments, and users can delete their schedules if needed.",
+        "bgImage": "/DoctorPortal-2.png",
+        "github": "https://github.com/Amran-H/doctors-portal-client",
+        "demo": "https://doctors-portal-493d8.web.app/",
         "technologies": [
             "React",
             "Node.js",
@@ -15,26 +15,24 @@
         ]
     },
     {
-        "title": "Toy Marketplace",
-        "description": "An e-commerce platform for toy sellers with authentication, CRUD operations, and responsive design.",
-        "bgImage": "/work-2.png",
-        "github": "https://github.com/yourusername/toy-marketplace",
-        "demo": "https://toy-marketplace-demo.vercel.app",
+        "title": "Stunning Portfolio",
+        "description": "This is a React-based portfolio project styled with Vanilla CSS. It features a clean and responsive design. It includes sections for skills, projects, and contact forms, providing a structured showcase of work and expertise.",
+        "bgImage": "/portfolio.png",
+        "github": "https://github.com/Amran-H/my-new-portfolio",
+        "demo": "https://portfolio2-by-amran.netlify.app/",
         "technologies": [
             "React",
             "Node.js",
             "MongoDB",
-            "Express.js",
-            "Tailwind",
-            "Firebase"
+            "Express.js"
         ]
     },
     {
-        "title": "Summer Camp School",
-        "description": "A learning management system for summer camps with student, instructor, and admin roles.",
-        "bgImage": "/work-3.png",
-        "github": "https://github.com/yourusername/summer-camp",
-        "demo": "https://summer-camp-demo.vercel.app",
+        "title": "Survey Bee",
+        "description": "Survey Bee is an online survey platform that allows users to create, distribute, and analyze surveys. It features an intuitive UI for designing questionnaires, collecting responses, and helps data-driven decision-making.",
+        "bgImage": "/surveyBee.png",
+        "github": "https://github.com/Tawhidul3233/survey-bee-client",
+        "demo": "https://survey-bee.netlify.app/",
         "technologies": [
             "React",
             "Next.js",
@@ -45,18 +43,17 @@
         ]
     },
     {
-        "title": "Career Hub Platform",
-        "description": "A job search platform with advanced filtering, application tracking, and resume builder functionality.",
-        "bgImage": "/work-4.png",
-        "github": "https://github.com/yourusername/career-hub",
-        "demo": "https://career-hub-demo.vercel.app",
+        "title": "SkyPearl News",
+        "description": "SkyPearl News is an online news platform that provides the latest updates across various categories. Users can log in via Google or GitHub, explore trending stories, and engage with content through social sharing features.",
+        "bgImage": "/news.png",
+        "github": "https://github.com/Amran-H/SkyPearl-News",
+        "demo": "https://skypearl-news.web.app/",
         "technologies": [
             "React",
-            "Redux",
             "Node.js",
             "MongoDB",
-            "Express.js",
-            "Material-UI"
+            "Tailwind",
+            "Firebase"
         ]
     }
 ]
