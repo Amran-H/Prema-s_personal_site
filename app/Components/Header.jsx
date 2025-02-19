@@ -1,10 +1,11 @@
-import { assets } from '@/assets/assets';
-import Image from 'next/image';
 import React from 'react';
 import { motion } from 'motion/react';
-import { FaHandPeace, FaDownload } from 'react-icons/fa';
+import { FaDownload } from 'react-icons/fa';
 import { BsArrowRight } from 'react-icons/bs';
 import Typewriter from 'typewriter-effect';
+import Image from 'next/image';
+import user from '../../public/akash.png';
+
 
 
 const Header = () => {
@@ -17,7 +18,7 @@ const Header = () => {
                 transition={{ duration: 0.8, type: 'spring', stiffness: 100 }}
             >
                 <Image
-                    src={assets.my_image}
+                    src={user}
                     alt='Profile Image'
                     width={128}
                     height={128}

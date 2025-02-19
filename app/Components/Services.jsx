@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'motion/react';
-import { FaCode, FaPaintBrush, FaLaptopCode, FaMobile, FaDesktop, FaPalette, FaFigma, FaSwatchbook } from 'react-icons/fa';
-import { BsArrowRight } from 'react-icons/bs';
+import { FaCode, FaPaintBrush, FaLaptopCode, FaDesktop, FaPalette, FaFigma, FaSwatchbook } from 'react-icons/fa';
 
 const Services = () => {
     const [servicesData, setServicesData] = useState([]);
