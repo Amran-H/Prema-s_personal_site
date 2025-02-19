@@ -43,7 +43,7 @@ const Work = () => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1 }}
-            id='work' className='w-full px-[12%] py-10 scroll-mt-20'>
+            id='work' className='w-full px-[8%] md:px-[12%] py-10 scroll-mt-20'>
 
             <motion.h4
                 initial={{ y: -20, opacity: 0 }}
@@ -107,7 +107,7 @@ const Work = () => {
                                     className="px-6 py-3 flex items-center gap-3 bg-blue-600 text-white rounded-lg
                    hover:bg-blue-500 transition-all duration-300 shadow-md hover:scale-105">
                                     <SiVercel className="w-6 h-6" />
-                                    <span className="text-sm font-semibold">Live Demo</span>
+                                    <span className="text-sm font-semibold">Live</span>
                                 </a>
                             </div>
                         </div>

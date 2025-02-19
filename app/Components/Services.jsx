@@ -29,7 +29,7 @@ const Services = () => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1 }}
-            id='services' className='w-full px-[12%] py-20 scroll-mt-20'>
+            id='services' className='w-full px-[8%] md:px-[12%] py-20 scroll-mt-20'>
 
             <motion.h4
                 initial={{ y: -20, opacity: 0 }}
