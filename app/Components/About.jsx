@@ -12,6 +12,7 @@ const About = ({ isDarkMode }) => {
 
     useEffect(() => {
         fetch('/data/infoList.json')
+            // fetch('http://localhost:5000/personalInfo')
             .then(res => res.json())
             .then(data => setInfoList(data));
     }, []);

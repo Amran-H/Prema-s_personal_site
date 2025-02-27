@@ -34,6 +34,7 @@ const Work = () => {
 
     useEffect(() => {
         fetch('/data/workData.json')
+            // fetch('http://localhost:5000/workData')
             .then(res => res.json())
             .then(data => setWorkData(data));
     }, []);
@@ -154,7 +155,7 @@ const Work = () => {
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.2, delay: 0.3 }}
-                href="https://drive.google.com/file/d/1EseGxweB-20X71fyKcCR5Bk8DmKQbfGF/view"
+                href="https://github.com/Amran-H"
                 target="_blank"
                 rel="noopener noreferrer"
                 className='group relative w-max mx-auto px-10 py-3 border rounded-full border-gray-500 

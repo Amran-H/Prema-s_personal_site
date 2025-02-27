@@ -8,6 +8,7 @@ const Skills = () => {
 
     useEffect(() => {
         fetch('/data/skillsData.json')
+            // fetch('http://localhost:5000/skillsData')
             .then(res => res.json())
             .then(data => setSkillsData(data));
     }, []);
