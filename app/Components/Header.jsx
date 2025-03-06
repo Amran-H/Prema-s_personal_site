@@ -10,7 +10,9 @@ import user from '../../public/akash.png';
 
 const Header = () => {
     return (
-        <div className='w-11/12 max-w-5xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4'>
+        <div className='w-11/12 max-w-5xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4 '
+        // style={{ backgroundImage: "url('/bg-header.png')" }}
+        >
             {/* Profile Image */}
             <motion.div
                 initial={{ scale: 0 }}
