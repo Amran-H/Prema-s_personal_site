@@ -38,7 +38,7 @@ const Skills = () => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1 }}
-            id='skills' className='w-full px-[8%] md:px-[12%] py-10 scroll-mt-20'>
+            id='skills' className='w-full px-[8%] md:px-[12%] py-10 mb-10 scroll-mt-20'>
 
             <motion.h4
                 initial={{ y: -20, opacity: 0 }}
@@ -50,7 +50,7 @@ const Skills = () => {
                 initial={{ y: -20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.5 }}
-                className='text-center text-5xl font-Ovo mb-16'>My Skills</motion.h2>
+                className='text-center text-5xl font-Ovo mb-16'>My Development Skills</motion.h2>
 
             <motion.div
                 initial={{ opacity: 0, y: 20 }}

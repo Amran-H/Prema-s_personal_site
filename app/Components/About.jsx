@@ -52,7 +52,7 @@ const About = ({ isDarkMode }) => {
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.8 }}
-                className='flex w-full flex-col lg:flex-row items-center gap-10 lg:gap-20 my-20'>
+                className='flex w-full flex-col lg:flex-row items-center gap-10 lg:gap-20 my-10'>
                 <motion.div
                     initial={{ opacity: 0, scale: 0.9 }}
                     whileInView={{ opacity: 1, scale: 1 }}
@@ -65,7 +65,10 @@ const About = ({ isDarkMode }) => {
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 0.6, delay: 0.8 }}
                     className='flex-1'>
-                    <p className='mb-10 max-w-2xl font-Ovo'>A certified MERN stack web developer with a year of experience. I specialize in dynamic web applications using MongoDB, Expressjs, Reactjs, and Nodejs. Expertise: HTML5, CSS3, JavaScript, Reactjs, Bootstrap, Tailwind CSS. Back-end: Nodejs, Expressjs, MongoDB, Mongoose, RESTful APIs. Tools: Git, GitHub, Netlify. I prioritize clean code, performance, and scalability.</p>
+                    <p className='mb-10 max-w-2xl font-Ovo'>
+                        {/* A certified MERN stack web developer with a year of experience. I specialize in dynamic web applications using MongoDB, Expressjs, Reactjs, and Nodejs. Expertise: HTML5, CSS3, JavaScript, Reactjs, Bootstrap, Tailwind CSS. Back-end: Nodejs, Expressjs, MongoDB, Mongoose, RESTful APIs. Tools: Git, GitHub, Netlify. I prioritize clean code, performance, and scalability. */}
+                        I’m a certified MERN stack web developer with a BBA and a passion for continuous learning. With 3 years of experience, I specialize in building dynamic web applications using MongoDB, Express.js, React.js, and Node.js. Driven by a curiosity for research and development, I’m always looking to solve real-world problems in both the academic and development sectors.
+                    </p>
 
                     <motion.ul
                         initial={{ opacity: 0 }}

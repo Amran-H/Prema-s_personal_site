@@ -1,5 +1,20 @@
 [
     {
+        "title": "My Restaurant",
+        "description": "he My Restaurant website features a responsive design, with user and admin dashboards. Users can browse the menu, add items to the cart, and make payments via Stripe. It uses Firebase authentication for secure login, and the admin panel allows for order and menu management.",
+        "bgImage": "/My-restaurant.png",
+        "github": "https://github.com/Amran-H/My_Restaurant_Client",
+        "demo": "https://my-restaurant-2f3ca.web.app/",
+        "technologies": [
+            "React",
+            "Node.js",
+            "MongoDB",
+            "Express.js",
+            "Tailwind",
+            "Firebase"
+        ]
+    },
+    {
         "title": "Doctors Portal",
         "description": "Doctors Portal is a responsive website for scheduling doctor appointments. Users must log in to book, view, or manage their schedules. The dashboard displays all appointments, and users can delete their schedules if needed.",
         "bgImage": "/DoctorPortal-2.png",

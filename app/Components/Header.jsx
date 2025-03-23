@@ -54,9 +54,9 @@ const Header = () => {
                 <Typewriter
                     options={{
                         strings: [
-                            'I am a Passionate Web Developer',
                             'I am a Fast Learner',
-                            'I Aim to Innovate and Explore'
+                            'I Aim to Innovate and Explore',
+                            'And I am a Passionate Developer'
                         ],
                         autoStart: true,
                         loop: true,
@@ -68,14 +68,15 @@ const Header = () => {
             </motion.h1>
 
             {/* Description */}
-            <motion.p className='max-w-2xl mx-auto font-Ovo'
+            <motion.p className='max-w-3xl mx-auto font-Ovo'
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.7 }}
             >
-                I like to explore and challenge my expertise. My aim is to be comfortable with
+                {/* I like to explore and challenge my expertise. My aim is to be comfortable with
                 always-changing technologies by learning new tools that my work demands conveniently
-                and efficiently. As a fast learner, I enjoy learning new things.
+                and efficiently. As a fast learner, I enjoy learning new things. */}
+                I'm a BBA student and a web developer fond of learning and tackling new challenges. I try to stay up-to-date with the latest technology and tools, and always looking for ways to outgrow myself. With an attraction for academic research, I'm always curious and eager to solve issues that make a difference.
             </motion.p>
 
             {/* Buttons */}

@@ -1,17 +1,17 @@
 [
     {
         "title": "Languages",
-        "description": "HTML, CSS, JavaScript React Js, Next Js",
+        "description": "HTML, CSS, JavaScript React Js, Next Js, Node Js, Express Js, MongoDB",
         "iconType": "code"
     },
     {
         "title": "Education",
-        "description": "B.Tech in Computer Science",
+        "description": "BBA in Tourism and Hospitality Management",
         "iconType": "education"
     },
     {
         "title": "Projects",
-        "description": "Built more than 5 projects",
+        "description": "Developed several website for my clients",
         "iconType": "projects"
     }
 ]
