@@ -10,7 +10,7 @@ import user from '../../public/akash.png';
 
 const Header = () => {
     return (
-        <div className='w-11/12 max-w-5xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4 '
+        <div className='w-11/12 max-w-5xl text-center mx-auto min-h-screen pt-10 sm:py-0 flex flex-col items-center justify-center gap-4 '
         // style={{ backgroundImage: "url('/bg-header.png')" }}
         >
             {/* Profile Image */}
@@ -24,7 +24,7 @@ const Header = () => {
                     alt='Profile Image'
                     width={128}
                     height={128}
-                    className='rounded-full bg-gray-200 sm:mr-2'
+                    className='rounded-full bg-white sm:mr-2'
                 />
             </motion.div>
 
@@ -68,7 +68,7 @@ const Header = () => {
             </motion.h1>
 
             {/* Description */}
-            <motion.p className='max-w-3xl mx-auto font-Ovo'
+            <motion.p className='max-w-3xl mx-auto font-Ovo text-base md:text-lg px-2'
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.7 }}
