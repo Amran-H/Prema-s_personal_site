@@ -74,7 +74,8 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
 
                     <li><a href="#top" className='font-Ovo relative after:content-[""] after:absolute after:w-0 after:h-[2px] after:bg-black dark:after:bg-white after:left-0 after:-bottom-1 after:duration-300 hover:after:w-full' onClick={closeMenu}>Home</a></li>
                     <li><a href="#about" className='font-Ovo relative after:content-[""] after:absolute after:w-0 after:h-[2px] after:bg-black dark:after:bg-white after:left-0 after:-bottom-1 after:duration-300 hover:after:w-full' onClick={closeMenu}>About me</a></li>
-                    <li><a href="#services" className='font-Ovo relative after:content-[""] after:absolute after:w-0 after:h-[2px] after:bg-black dark:after:bg-white after:left-0 after:-bottom-1 after:duration-300 hover:after:w-full' onClick={closeMenu}>Services</a></li>
+                    <li><a href="#skills" className='font-Ovo relative after:content-[""] after:absolute after:w-0 after:h-[2px] after:bg-black dark:after:bg-white after:left-0 after:-bottom-1 after:duration-300 hover:after:w-full' onClick={closeMenu}>Skills</a></li>
+                    {/* <li><a href="#services" className='font-Ovo relative after:content-[""] after:absolute after:w-0 after:h-[2px] after:bg-black dark:after:bg-white after:left-0 after:-bottom-1 after:duration-300 hover:after:w-full' onClick={closeMenu}>Services</a></li> */}
                     <li><a href="#work" className='font-Ovo relative after:content-[""] after:absolute after:w-0 after:h-[2px] after:bg-black dark:after:bg-white after:left-0 after:-bottom-1 after:duration-300 hover:after:w-full' onClick={closeMenu}>My work</a></li>
                     <li><a href="#contact" className='font-Ovo relative after:content-[""] after:absolute after:w-0 after:h-[2px] after:bg-black dark:after:bg-white after:left-0 after:-bottom-1 after:duration-300 hover:after:w-full' onClick={closeMenu}>Contact me</a></li>
                 </ul>
