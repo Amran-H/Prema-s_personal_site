@@ -14,21 +14,20 @@ const Header = () => {
         <div className='w-11/12 max-w-5xl text-center mx-auto min-h-screen pt-10 sm:py-0 flex flex-col items-center justify-center gap-4'
         >
 
-
             {/* Platform Buttons - Sticky on right side */}
-            <div className="fixed right-4 top-1/2 transform -translate-y-1/2 flex flex-col gap-4 z-50">
+            <div className="fixed left-3 sm:left-28 top-1/3 transform -translate-y-1/2 flex flex-col gap-4 z-50">
                 {/* Fiverr Button */}
                 <div className="relative w-12 h-12 group">
                     <a
                         href="https://www.fiverr.com/s/7YaQL5b"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="absolute top-0 right-0 flex justify-center items-center bg-white dark:bg-gray-800 w-12 h-12 rounded-full shadow-lg z-10"
+                        className="absolute top-0 left-0 flex justify-center items-center bg-white dark:bg-gray-800 w-12 h-12 rounded-full shadow-lg z-10"
                     >
-                        <SiFiverr className="text-[#1DBF73] text-2xl" />
+                        <SiFiverr className="text-[#1DBF73] text-3xl" />
                     </a>
-                    <div className="absolute top-0 right-0 h-12 bg-white dark:bg-gray-800 rounded-full shadow-lg flex items-center justify-end pr-12 overflow-hidden transition-all duration-300 w-12 group-hover:w-32 opacity-0 group-hover:opacity-100">
-                        <span className="whitespace-nowrap font-medium px-4">Fiverr</span>
+                    <div className="absolute top-0 left-0 h-12 bg-white dark:bg-gray-800 rounded-full shadow-lg flex items-center pl-10 overflow-hidden transition-all duration-300 w-12 group-hover:w-48 opacity-0 group-hover:opacity-100">
+                        <span className="whitespace-nowrap font-medium px-4">Hire me on Fiverr</span>
                     </div>
                 </div>
 
@@ -38,12 +37,12 @@ const Header = () => {
                         href="https://www.upwork.com/freelancers/amranh3?mp_source=share"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="absolute top-0 right-0 flex justify-center items-center bg-white dark:bg-gray-800 w-12 h-12 rounded-full shadow-lg z-10"
+                        className="absolute top-0 left-0 flex justify-center items-center bg-white dark:bg-gray-800 w-12 h-12 rounded-full shadow-lg z-10"
                     >
                         <SiUpwork className="text-[#6FDA44] text-2xl" />
                     </a>
-                    <div className="absolute top-0 right-0 h-12 bg-white dark:bg-gray-800 rounded-full shadow-lg flex items-center justify-end pr-12 overflow-hidden transition-all duration-300 w-12 group-hover:w-32 opacity-0 group-hover:opacity-100">
-                        <span className="whitespace-nowrap font-medium px-4">Upwork</span>
+                    <div className="absolute top-0 left-0 h-12 bg-white dark:bg-gray-800 rounded-full shadow-lg flex items-center pl-10 overflow-hidden transition-all duration-300 w-12 group-hover:w-[198px] opacity-0 group-hover:opacity-100">
+                        <span className="whitespace-nowrap font-medium px-4">Hire me on Upwork</span>
                     </div>
                 </div>
             </div>
