@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { FaDownload } from 'react-icons/fa';
 import { BsArrowRight } from 'react-icons/bs';
+import { SiFiverr, SiUpwork } from 'react-icons/si'; // Import Fiverr and Upwork icons
 import Typewriter from 'typewriter-effect';
 import Image from 'next/image';
 import user from '../../public/akash.png';
@@ -10,9 +11,43 @@ import user from '../../public/akash.png';
 
 const Header = () => {
     return (
-        <div className='w-11/12 max-w-5xl text-center mx-auto min-h-screen pt-10 sm:py-0 flex flex-col items-center justify-center gap-4 '
-        // style={{ backgroundImage: "url('/bg-header.png')" }}
+        <div className='w-11/12 max-w-5xl text-center mx-auto min-h-screen pt-10 sm:py-0 flex flex-col items-center justify-center gap-4'
         >
+
+
+            {/* Platform Buttons - Sticky on right side */}
+            <div className="fixed right-4 top-1/2 transform -translate-y-1/2 flex flex-col gap-4 z-50">
+                {/* Fiverr Button */}
+                <div className="relative w-12 h-12 group">
+                    <a
+                        href="https://www.fiverr.com/s/7YaQL5b"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="absolute top-0 right-0 flex justify-center items-center bg-white dark:bg-gray-800 w-12 h-12 rounded-full shadow-lg z-10"
+                    >
+                        <SiFiverr className="text-[#1DBF73] text-2xl" />
+                    </a>
+                    <div className="absolute top-0 right-0 h-12 bg-white dark:bg-gray-800 rounded-full shadow-lg flex items-center justify-end pr-12 overflow-hidden transition-all duration-300 w-12 group-hover:w-32 opacity-0 group-hover:opacity-100">
+                        <span className="whitespace-nowrap font-medium px-4">Fiverr</span>
+                    </div>
+                </div>
+
+                {/* Upwork Button */}
+                <div className="relative w-12 h-12 group">
+                    <a
+                        href="https://www.upwork.com/freelancers/amranh3?mp_source=share"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="absolute top-0 right-0 flex justify-center items-center bg-white dark:bg-gray-800 w-12 h-12 rounded-full shadow-lg z-10"
+                    >
+                        <SiUpwork className="text-[#6FDA44] text-2xl" />
+                    </a>
+                    <div className="absolute top-0 right-0 h-12 bg-white dark:bg-gray-800 rounded-full shadow-lg flex items-center justify-end pr-12 overflow-hidden transition-all duration-300 w-12 group-hover:w-32 opacity-0 group-hover:opacity-100">
+                        <span className="whitespace-nowrap font-medium px-4">Upwork</span>
+                    </div>
+                </div>
+            </div>
+
             {/* Profile Image */}
             <motion.div
                 initial={{ scale: 0 }}
