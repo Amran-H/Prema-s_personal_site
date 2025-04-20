@@ -15,7 +15,12 @@ const Header = () => {
         >
 
             {/* Platform Buttons - Sticky on right side */}
-            <div className="fixed left-3 sm:left-28 top-1/3 transform -translate-y-1/2 flex flex-col gap-4 z-50">
+            <motion.div
+                initial={{ scale: 0 }}
+                whileInView={{ scale: 1 }}
+                transition={{ duration: 0.8, type: 'spring', stiffness: 100 }}
+                className="fixed left-3 sm:left-28 top-1/3 transform -translate-y-1/2 flex flex-col gap-4 z-50"
+            >
                 {/* Fiverr Button */}
                 <div className="relative w-12 h-12 group">
                     <a
@@ -45,7 +50,7 @@ const Header = () => {
                         <span className="whitespace-nowrap font-medium px-4">Hire me on Upwork</span>
                     </div>
                 </div>
-            </div>
+            </motion.div>
 
             {/* Profile Image */}
             <motion.div
