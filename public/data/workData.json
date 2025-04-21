@@ -1,7 +1,7 @@
 [
     {
         "title": "My Restaurant",
-        "description": "he My Restaurant website features a responsive design, with user and admin dashboards. Users can browse the menu, add items to the cart, and make payments via Stripe. It uses Firebase authentication for secure login, and the admin panel allows for order and menu management.",
+        "description": "My Restaurant website features a responsive design, with user and admin dashboards. Users can browse the menu, add items to the cart, and make payments via Stripe. It uses Firebase authentication for secure login, and the admin panel allows for order and menu management.",
         "bgImage": "/My-restaurant.png",
         "github": "https://github.com/Amran-H/My_Restaurant_Client",
         "demo": "https://my-restaurant-2f3ca.web.app/",
