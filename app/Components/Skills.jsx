@@ -120,7 +120,6 @@ const Skills = () => {
 
                 {/* Animated skill container */}
                 <motion.div
-                    key={activeCategory}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.3, delay: 0.6 }}
@@ -151,7 +150,7 @@ const Skills = () => {
 
                                 return (
                                     <motion.div
-                                        key={skill.name}
+                                        key={`${activeCategory}-${skill.name}`}
                                         initial={{ opacity: 0, x: -20 }}
                                         animate={{ opacity: 1, x: 0 }}
                                         transition={{ duration: 0.4, delay: index * 0.1 }}
@@ -176,11 +175,12 @@ const Skills = () => {
                                                 </span> */}
                                             </div>
 
-                                            {/* Fancy progress bar */}
+                                            {/* progress bar */}
                                             <div className="h-2 bg-gray-100 dark:bg-gray-700 rounded-full overflow-hidden relative">
                                                 <motion.div
                                                     initial={{ width: 0 }}
-                                                    animate={{ width: skill.level }}
+                                                    whileInView={{ width: skill.level }}
+                                                    viewport={{ once: false }}
                                                     transition={{ duration: 1, delay: 0.2 + index * 0.1 }}
                                                     className="h-full rounded-full relative"
                                                     style={{ backgroundColor: skill.color }}
