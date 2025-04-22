@@ -137,7 +137,7 @@ const Work = () => {
                                                 title={tech}
                                             >
                                                 <TechIcon
-                                                    className="w-5 h-5 transition-colors duration-300"
+                                                    className="w-4 h-4 transition-colors duration-300"
                                                     style={{ color }}
                                                 />
                                             </div>
