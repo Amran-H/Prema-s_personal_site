@@ -104,7 +104,7 @@ const Work = () => {
             <motion.h2
                 initial={{ y: -20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
+                transition={{ duration: 0.4, delay: 0.3 }}
                 className='text-center text-5xl font-Ovo'
             >
                 My Recent Works
@@ -113,7 +113,7 @@ const Work = () => {
             <motion.p
                 initial={{ y: -20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
+                transition={{ duration: 0.4, delay: 0.4 }}
                 className='text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo'
             >
                 As a certified MERN stack web developer with 3 years of experience these are some of my works.

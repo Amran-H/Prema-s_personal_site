@@ -40,12 +40,12 @@ const About = ({ isDarkMode }) => {
             <motion.h4
                 initial={{ opacity: 0, y: -20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
                 className='text-center mb-2 text-lg font-ovo'>Introduction</motion.h4>
             <motion.h2
                 initial={{ opacity: 0, y: -20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
                 className='text-center text-5xl font-Ovo'>About me</motion.h2 >
 
             <motion.div
@@ -63,7 +63,7 @@ const About = ({ isDarkMode }) => {
                 <motion.div
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
-                    transition={{ duration: 0.6, delay: 0.8 }}
+                    transition={{ duration: 0.5, delay: 0.4 }}
                     className='flex-1'>
                     <p className='mb-10 max-w-2xl font-Ovo'>
                         {/* A certified MERN stack web developer with a year of experience. I specialize in dynamic web applications using MongoDB, Expressjs, Reactjs, and Nodejs. Expertise: HTML5, CSS3, JavaScript, Reactjs, Bootstrap, Tailwind CSS. Back-end: Nodejs, Expressjs, MongoDB, Mongoose, RESTful APIs. Tools: Git, GitHub, Netlify. I prioritize clean code, performance, and scalability. */}
@@ -73,7 +73,7 @@ const About = ({ isDarkMode }) => {
                     <motion.ul
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
-                        transition={{ duration: 0.8, delay: 1 }}
+                        transition={{ duration: 0.5, delay: 0.5 }}
                         className='grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl '>
                         {
                             infoList.map(({ iconType, title, description }, index) => (
@@ -114,14 +114,14 @@ const About = ({ isDarkMode }) => {
                     <motion.h4
                         initial={{ y: 20, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}
-                        transition={{ duration: 0.5, delay: 0.8 }}
+                        transition={{ duration: 0.5, delay: 0.6 }}
                         className='my-6 text-gray-700 font-Ovo dark:text-white'>
                         Tools I use
                     </motion.h4>
                     <motion.ul
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
-                        transition={{ duration: 0.6, delay: 0.9 }}
+                        transition={{ duration: 0.6, delay: 0.6 }}
                         className='flex flex-wrap items-center gap-3 sm:gap-4'>
                         <motion.li whileHover={{ scale: 1.1 }} className='flex items-center justify-center border-[0.5px] border-gray-400 rounded-full shadow-lg shadow-gray-400 p-5 cursor-pointer hover:scale-110 ease-in duration-300'>
                             <FaReact className="w-5 h-5 text-[#61DAFB] " />
