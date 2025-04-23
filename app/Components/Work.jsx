@@ -148,10 +148,10 @@ const Work = () => {
                         ref={sliderRef}
                         className="flex transition-all duration-500 ease-out"
                         animate={{ x: -currentSlide * (100 / slidesToShow) + '%' }}
-                        // transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                        transition={{ type: "spring", stiffness: 300, damping: 30 }}
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.4, delay: 0.6, type: "spring", stiffness: 300, damping: 30 }}
+                    // transition={{ duration: 0.4, delay: 0.6, type: "spring", stiffness: 300, damping: 30 }}
                     >
                         {workData.map((project, index) => (
                             <motion.div
