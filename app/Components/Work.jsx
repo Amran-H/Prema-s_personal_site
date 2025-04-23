@@ -126,7 +126,7 @@ const Work = () => {
                         <button
                             onClick={prevSlide}
                             disabled={currentSlide === 0}
-                            className={`absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-12 z-10 w-10 h-10 rounded-full bg-white/70 dark:bg-gray-800/70 flex items-center justify-center shadow-md hover:scale-110 hover:bg-white dark:hover:bg-gray-800 transition-all duration-300 ${currentSlide === 0 ? 'opacity-50 cursor-not-allowed' : ''}`}
+                            className={`absolute -left-1 sm:left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-12 z-10 w-10 h-10 rounded-full bg-white/70 dark:bg-gray-800/70 flex items-center justify-center shadow-md hover:scale-110 hover:bg-white dark:hover:bg-gray-800 transition-all duration-300 ${currentSlide === 0 ? 'opacity-50 cursor-not-allowed' : ''}`}
                             aria-label="Previous slide"
                         >
                             <FaChevronLeft className="text-gray-800 dark:text-white" />
@@ -134,7 +134,7 @@ const Work = () => {
                         <button
                             onClick={nextSlide}
                             disabled={currentSlide >= totalSlides - 1}
-                            className={`absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-12 z-10 w-10 h-10 rounded-full bg-white/70 dark:bg-gray-800/70 flex items-center justify-center shadow-md hover:scale-110 hover:bg-white dark:hover:bg-gray-800 transition-all duration-300 ${currentSlide >= totalSlides - 1 ? 'opacity-50 cursor-not-allowed' : ''}`}
+                            className={`absolute -right-1 sm:right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-12 z-10 w-10 h-10 rounded-full bg-white/70 dark:bg-gray-800/70 flex items-center justify-center shadow-md hover:scale-110 hover:bg-white dark:hover:bg-gray-800 transition-all duration-300 ${currentSlide >= totalSlides - 1 ? 'opacity-50 cursor-not-allowed' : ''}`}
                             aria-label="Next slide"
                         >
                             <FaChevronRight className="text-gray-800 dark:text-white" />
@@ -156,7 +156,7 @@ const Work = () => {
                                 className={`flex-shrink-0 w-full ${slidesToShow === 1 ? 'w-full' :
                                     slidesToShow === 2 ? 'w-1/2' :
                                         'w-1/3'
-                                    } px-3`}
+                                    } sm:px-3`}
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.3, delay: index * 0.1 }}
