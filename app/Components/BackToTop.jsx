@@ -1,17 +1,15 @@
 'use client'
-import React, { useState, useEffect } from 'react';
+
+import { useState, useEffect, useCallback } from 'react';
 import { FaArrowUp } from 'react-icons/fa';
 
 const BackToTop = () => {
     const [isVisible, setIsVisible] = useState(false);
 
-    const toggleVisibility = () => {
-        if (window.scrollY > 300) {
-            setIsVisible(true);
-        } else {
-            setIsVisible(false);
-        }
-    };
+    // Memoize the handler to avoid recreation on each render
+    const handleScroll = useCallback(() => {
+        setIsVisible(window.scrollY > 200);
+    }, []);
 
     const scrollToTop = () => {
         window.scrollTo({
@@ -21,15 +19,22 @@ const BackToTop = () => {
     };
 
     useEffect(() => {
-        window.addEventListener('scroll', toggleVisibility);
-        return () => window.removeEventListener('scroll', toggleVisibility);
-    }, []);
+        // Add initial check on mount
+        handleScroll();
+
+        // Add event listener with passive option for better performance
+        window.addEventListener('scroll', handleScroll, { passive: true });
+
+        // Clean up event listener
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [handleScroll]);
+
+    if (!isVisible) return null;
 
     return (
         <button
             onClick={scrollToTop}
-            className={`fixed bottom-6 right-6 z-50 p-3 rounded-full bg-blue-600 text-white shadow-lg transition-opacity duration-300 ${isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'
-                }`}
+            className="fixed bottom-8 right-4 sm:right-8 z-50 p-2 rounded-full bg-gray-800/80 hover:bg-gray-700 text-white shadow-lg transition-all duration-300 ease-in-out transform sm:hover:scale-110 backdrop-blur-sm"
             aria-label="Back to Top"
         >
             <FaArrowUp className="w-5 h-5" />
