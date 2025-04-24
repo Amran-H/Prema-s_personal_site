@@ -65,7 +65,7 @@ const About = ({ isDarkMode }) => {
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 0.5, delay: 0.4 }}
                     className='flex-1'>
-                    <p className='mb-10 max-w-2xl font-Ovo'>
+                    <p className='mb-10 max-w-2xl font-Ovo text-justify'>
                         {/* A certified MERN stack web developer with a year of experience. I specialize in dynamic web applications using MongoDB, Expressjs, Reactjs, and Nodejs. Expertise: HTML5, CSS3, JavaScript, Reactjs, Bootstrap, Tailwind CSS. Back-end: Nodejs, Expressjs, MongoDB, Mongoose, RESTful APIs. Tools: Git, GitHub, Netlify. I prioritize clean code, performance, and scalability. */}
                         I’m a certified MERN stack web developer with a BBA and a passion for continuous learning. With 3 years of experience, I specialize in building dynamic web applications using MongoDB, Express.js, React.js, and Node.js. Driven by a curiosity for research and development, I’m always looking to solve real-world problems in both the academic and development sectors.
                     </p>
@@ -121,7 +121,7 @@ const About = ({ isDarkMode }) => {
                     <motion.ul
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
-                        transition={{ duration: 0.6, delay: 0.6 }}
+                        transition={{ duration: 0.5, delay: 0.5 }}
                         className='flex flex-wrap items-center gap-3 sm:gap-4'>
                         <motion.li whileHover={{ scale: 1.1 }} className='flex items-center justify-center border-[0.5px] border-gray-400 rounded-full shadow-lg shadow-gray-400 p-5 cursor-pointer hover:scale-110 ease-in duration-300'>
                             <FaReact className="w-5 h-5 text-[#61DAFB] " />

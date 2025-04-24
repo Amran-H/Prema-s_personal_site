@@ -20,11 +20,11 @@ const Footer = ({ isDarkMode }) => {
             </div>
 
             <div className='text-center md:flex items-center justify-between border-t border-gray-400 mx-[10%] mt-12 py-6'>
-                <p >Copyright © {year ? year : 'Loading...'} - All right reserved by Amran Hossain</p>
-                <ul className='flex items-center gap-10 justify-center mt-4 md:mt-0'>
-                    <li><a href="https://github.com/Amran-H" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-                    <li><a href="https://www.linkedin.com/in/amran-h/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-                    <li><a href="https://web.facebook.com/amran.h.akash00/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                <p className='font-Ovo'>Copyright © {year ? year : 'Loading...'} - All right reserved by Amran Hossain</p>
+                <ul className='flex items-center gap-10 justify-center mt-4 md:mt-0 '>
+                    <li><a className='font-Ovo hover:text-blue-500' href="https://github.com/Amran-H" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                    <li><a className='font-Ovo hover:text-blue-500' href="https://www.linkedin.com/in/amran-h/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                    <li><a className='font-Ovo hover:text-blue-500' href="https://web.facebook.com/amran.h.akash00/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
                 </ul>
             </div>
         </div>

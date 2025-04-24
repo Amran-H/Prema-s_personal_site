@@ -65,38 +65,38 @@ const Contact = () => {
             <motion.h2
                 initial={{ y: -20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
                 className='text-center text-5xl font-Ovo'>Let's Get in Touch</motion.h2>
 
             <motion.p
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.7 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
                 className='text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo'>I would love to hear your words. Leave me your comments, questions using the form below </motion.p>
 
             <motion.form
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.9 }}
+                transition={{ duration: 0.5, delay: 0.7 }}
                 onSubmit={onSubmit} className='max-w-2xl mx-auto'>
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mt-10 mb-8 overflow-hidden'>
 
                     <motion.input
                         initial={{ x: -50, opacity: 0 }}
                         whileInView={{ x: 0, opacity: 1 }}
-                        transition={{ duration: 0.6, delay: 1 }}
+                        transition={{ duration: 0.6, delay: 0.7 }}
                         type="text" placeholder='Enter your name' required className='flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-[#0f172a] dark:border-white/90' name='name' />
 
                     <motion.input
                         initial={{ x: 50, opacity: 0 }}
                         whileInView={{ x: 0, opacity: 1 }}
-                        transition={{ duration: 0.6, delay: 1 }}
+                        transition={{ duration: 0.6, delay: 0.7 }}
                         type="email" placeholder='Enter your email' required className='flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-[#0f172a] dark:border-white/90' name='email' />
                 </div>
                 <motion.textarea
                     initial={{ y: 50, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 0.6, delay: 1 }}
+                    transition={{ duration: 0.6, delay: 0.7 }}
                     rows={6} placeholder='Enter your message' required className='w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md bg-white mb-5 dark:bg-[#0f172a] dark:border-white/90' name='message' ></motion.textarea>
 
                 <motion.button
