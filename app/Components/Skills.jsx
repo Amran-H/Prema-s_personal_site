@@ -64,7 +64,7 @@ const Skills = () => {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.8 }}
             id="skills"
-            className="w-full py-24 relative overflow-hidden"
+            className="w-full py-24 relative overflow-hidden "
         >
             {/* Background design elements */}
             <div className="absolute inset-0 z-0">
