@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'motion/react';
 import { FaReact, FaNodeJs, FaGit, FaHtml5, FaCss3Alt, FaBootstrap, FaDatabase } from 'react-icons/fa';
 import { SiMongodb, SiExpress, SiTailwindcss, SiJavascript, SiNextdotjs, SiRedux, SiFirebase } from 'react-icons/si';
 
@@ -86,6 +86,13 @@ const Skills = () => {
                         whileInView={{ y: 0, opacity: 1 }}
                         transition={{ duration: 0.5, delay: 0.4 }}
                         className='text-center text-5xl font-Ovo mb-16'>My Development Skills</motion.h2>
+
+                    {/* <motion.div
+                        initial={{ scaleX: 0 }}
+                        whileInView={{ scaleX: 1 }}
+                        transition={{ duration: 0.6, delay: 0.6 }}
+                        className="h-1 w-24 bg-blue-500 mx-auto"
+                    ></motion.div> */}
                 </div>
 
                 {/* Category tabs */}
@@ -116,7 +123,7 @@ const Skills = () => {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.3, delay: 0.6 }}
-                    className="relative bg-white/60 dark:bg-gray-800/60 backdrop-blur-md rounded-3xl p-8 shadow-xl border border-gray-100 dark:border-gray-700 overflow-hidden"
+                    className="relative bg-white/60 dark:bg-gray-800/60 backdrop-blur-md rounded-3xl p-8 shadow-xl border border-gray-100 dark:border-gray-700"
                 >
                     {/* Hexagon background pattern */}
                     <div className="absolute inset-0 overflow-hidden rounded-3xl opacity-5">
@@ -125,86 +132,77 @@ const Skills = () => {
                     </div>
 
                     <div className="relative z-10">
-                        {/* Active category title with animation */}
-                        <AnimatePresence mode="wait">
-                            <motion.h3
-                                key={`title-${activeCategory}`}
-                                initial={{ opacity: 0, x: -20 }}
-                                animate={{ opacity: 1, x: 0 }}
-                                exit={{ opacity: 0, x: 20 }}
-                                transition={{ duration: 0.3 }}
-                                className="text-2xl font-bold text-gray-800 dark:text-white mb-8 font-Ovo flex items-center"
-                            >
-                                {skillsData[activeCategory]?.category}
-                            </motion.h3>
-                        </AnimatePresence>
+                        {/* Active category title */}
+                        <motion.h3
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            className="text-2xl font-bold text-gray-800 dark:text-white mb-8 font-Ovo flex items-center"
+                        >
+                            {/* <span className="w-3 h-8 bg-blue-500 rounded-full mr-3 inline-block"></span> */}
+                            {skillsData[activeCategory]?.category}
+                        </motion.h3>
 
-                        {/* Skills mastery visualization with animated transitions */}
-                        <AnimatePresence mode="wait">
-                            <motion.div
-                                key={`skills-${activeCategory}`}
-                                initial={{ opacity: 0, x: -50 }}
-                                animate={{ opacity: 1, x: 0 }}
-                                exit={{ opacity: 0, x: 50 }}
-                                transition={{ duration: 0.4 }}
-                                className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6"
-                            >
-                                {skillsData[activeCategory]?.skills.map((skill, index) => {
-                                    const SkillIcon = getIcon(skill.iconName);
-                                    const percentage = parseInt(skill.level);
+                        {/* Skills mastery visualization */}
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
+                            {skillsData[activeCategory]?.skills.map((skill, index) => {
+                                const SkillIcon = getIcon(skill.iconName);
+                                const percentage = parseInt(skill.level);
 
-                                    return (
-                                        <motion.div
-                                            key={`${activeCategory}-${skill.name}`}
-                                            initial={{ opacity: 0, x: -20 }}
-                                            animate={{ opacity: 1, x: 0 }}
-                                            transition={{ duration: 0.4, delay: index * 0.1 }}
-                                            className="flex items-start"
-                                        >
-                                            {/* Icon bubble */}
-                                            <div className="mr-4 p-3 rounded-xl bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/30 dark:to-indigo-900/30 shadow-md">
-                                                <SkillIcon
-                                                    className="w-6 h-6"
-                                                    style={{ color: skill.color }}
-                                                />
+                                return (
+                                    <motion.div
+                                        key={`${activeCategory}-${skill.name}`}
+                                        initial={{ opacity: 0, x: -20 }}
+                                        animate={{ opacity: 1, x: 0 }}
+                                        transition={{ duration: 0.4, delay: index * 0.1 }}
+                                        className="flex items-start"
+                                    >
+                                        {/* Icon bubble */}
+                                        <div className="mr-4 p-3 rounded-xl bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/30 dark:to-indigo-900/30 shadow-md">
+                                            <SkillIcon
+                                                className="w-6 h-6"
+                                                style={{ color: skill.color }}
+                                            />
+                                        </div>
+
+                                        {/* Skill details */}
+                                        <div className="flex-1">
+                                            <div className="flex items-center justify-between mb-2">
+                                                <h4 className="font-medium text-gray-800 dark:text-gray-200">
+                                                    {skill.name}
+                                                </h4>
+                                                {/* <span className="text-sm font-bold" style={{ color: skill.color }}>
+                                                    {percentage}%
+                                                </span> */}
                                             </div>
 
-                                            {/* Skill details */}
-                                            <div className="flex-1">
-                                                <div className="flex items-center justify-between mb-2">
-                                                    <h4 className="font-medium text-gray-800 dark:text-gray-200">
-                                                        {skill.name}
-                                                    </h4>
-                                                </div>
-
-                                                {/* progress bar */}
-                                                <div className="h-2 bg-gray-100 dark:bg-gray-700 rounded-full overflow-hidden relative">
+                                            {/* progress bar */}
+                                            <div className="h-2 bg-gray-100 dark:bg-gray-700 rounded-full overflow-hidden relative">
+                                                <motion.div
+                                                    initial={{ width: 0 }}
+                                                    whileInView={{ width: skill.level }}
+                                                    viewport={{ once: false }}
+                                                    transition={{ duration: 1, delay: 0.2 + index * 0.1 }}
+                                                    className="h-full rounded-full relative"
+                                                    style={{ backgroundColor: skill.color }}
+                                                >
                                                     <motion.div
-                                                        initial={{ width: 0 }}
-                                                        animate={{ width: skill.level }}
-                                                        transition={{ duration: 1, delay: 0.2 + index * 0.1 }}
-                                                        className="h-full rounded-full relative"
-                                                        style={{ backgroundColor: skill.color }}
-                                                    >
-                                                        <motion.div
-                                                            animate={{
-                                                                x: ['-100%', '100%'],
-                                                            }}
-                                                            transition={{
-                                                                repeat: Infinity,
-                                                                duration: 1.5,
-                                                                ease: "linear"
-                                                            }}
-                                                            className="absolute top-0 bottom-0 w-24 bg-gradient-to-r from-transparent via-white/30 to-transparent"
-                                                        ></motion.div>
-                                                    </motion.div>
-                                                </div>
+                                                        animate={{
+                                                            x: ['-100%', '100%'],
+                                                        }}
+                                                        transition={{
+                                                            repeat: Infinity,
+                                                            duration: 1.5,
+                                                            ease: "linear"
+                                                        }}
+                                                        className="absolute top-0 bottom-0 w-24 bg-gradient-to-r from-transparent via-white/30 to-transparent"
+                                                    ></motion.div>
+                                                </motion.div>
                                             </div>
-                                        </motion.div>
-                                    );
-                                })}
-                            </motion.div>
-                        </AnimatePresence>
+                                        </div>
+                                    </motion.div>
+                                );
+                            })}
+                        </div>
                     </div>
                 </motion.div>
             </div>
