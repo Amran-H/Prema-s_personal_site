@@ -61,7 +61,7 @@ const Header = () => {
                         transition={{ duration: 0.8, type: 'spring', stiffness: 100 }}
                         className='flex justify-center lg:justify-start'
                     >
-                        <div className='relative w-64 sm:w-72 lg:w-[320px]'>
+                        <div className='relative w-64 mt-4 sm:w-72 lg:w-[320px]'>
                             <div className='absolute -inset-1 rounded-3xl bg-gradient-to-r from-blue-400 to-purple-500 opacity-20 blur-2xl'></div>
                             <Image
                                 src={user}

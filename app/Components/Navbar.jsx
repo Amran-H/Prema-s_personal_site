@@ -28,9 +28,9 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
         <>
             <nav className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 ${isScroll ? "bg-white bg-opacity-50 backdrop-blur-lg shadow-sm dark:bg-darkTheme dark:bg-opacity-50 dark:backdrop-blur-lg dark:shadow-white/20" : ""}`} >
                 <a href="/">
-                    <p className=' cursor-pointer font-bold text-2xl font-Ovo'>Prema Rani Bhowmik <span className='text-red-700'>.</span></p>
+                    <p className=' cursor-pointer font-bold text-2xl font-Ovo'>Prema Rani Bhowmik </p>
                 </a>
-                <ul className={`hidden md:flex items-center gap-4 lg:gap-8 rounded-full px-8 lg:px-12 py-3 ${isScroll ? "" : "bg-gray-300 shadow-sm bg-opacity-10 "}`}>
+                <ul className={`hidden md:flex items-center gap-4 lg:gap-8 rounded-full px-8 lg:px-12 py-3 `}>
                     <li><a href="#top" className='font-Ovo relative after:content-[""] after:absolute after:w-0 after:h-[2px] after:bg-black dark:after:bg-white after:left-0 after:-bottom-1 after:duration-300 hover:after:w-full text-[15px] lg:text-base'>Home</a></li>
                     <li><a href="#about" className='font-Ovo relative after:content-[""] after:absolute after:w-0 after:h-[2px] after:bg-black dark:after:bg-white after:left-0 after:-bottom-1 after:duration-300 hover:after:w-full text-[15px] lg:text-base'>About me</a></li>
                     <li><a href="#skills" className='font-Ovo relative after:content-[""] after:absolute after:w-0 after:h-[2px] after:bg-black dark:after:bg-white after:left-0 after:-bottom-1 after:duration-300 hover:after:w-full text-[15px] lg:text-base'>Skills</a></li>
@@ -50,14 +50,24 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
                         {/* <a href="#contact" className='hidden group lg:flex items-center gap-3 px-9 py-2 border border-gray-500 rounded-full ml-4 font-Ovo font-semibold dark:border-white/50'>
                         Contact <BsArrowUpRightCircleFill className="w-5 text-4xl relative z-10 transition-transform duration-300 group-hover:rotate-[133deg]" />
                     </a> */}
-                        <button className='block md:hidden' onClick={openMenu}>
-                            {isDarkMode ?
-                                <CgMenu className="w-7 h-7 text-white" /> :
-                                <CgMenu className="w-7 h-7" />
-                            }
-                        </button>
+
                     </div>
                 </ul>
+                <div className='flex flex-center gap-3'>
+                    <button onClick={() => setIsDarkMode(prev => !prev)}>
+                        {isDarkMode ? (
+                            <Icons.MoonIcon className=" text-white" />
+                        ) : (
+                            <Icons.SunIcon className=" text-black" />
+                        )}
+                    </button>
+                    <button className='block md:hidden' onClick={openMenu}>
+                        {isDarkMode ?
+                            <CgMenu className="w-7 h-7 text-white" /> :
+                            <CgMenu className="w-7 h-7" />
+                        }
+                    </button>
+                </div>
 
                 {/* For mobile */}
 
@@ -77,7 +87,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
                     <li><a href="#about" className='font-Ovo relative after:content-[""] after:absolute after:w-0 after:h-[2px] after:bg-black dark:after:bg-white after:left-0 after:-bottom-1 after:duration-300 hover:after:w-full' onClick={closeMenu}>About me</a></li>
                     <li><a href="#skills" className='font-Ovo relative after:content-[""] after:absolute after:w-0 after:h-[2px] after:bg-black dark:after:bg-white after:left-0 after:-bottom-1 after:duration-300 hover:after:w-full' onClick={closeMenu}>Skills</a></li>
                     {/* <li><a href="#services" className='font-Ovo relative after:content-[""] after:absolute after:w-0 after:h-[2px] after:bg-black dark:after:bg-white after:left-0 after:-bottom-1 after:duration-300 hover:after:w-full' onClick={closeMenu}>Services</a></li> */}
-                    <li><a href="#work" className='font-Ovo relative after:content-[""] after:absolute after:w-0 after:h-[2px] after:bg-black dark:after:bg-white after:left-0 after:-bottom-1 after:duration-300 hover:after:w-full' onClick={closeMenu}>My work</a></li>
+                    {/* <li><a href="#work" className='font-Ovo relative after:content-[""] after:absolute after:w-0 after:h-[2px] after:bg-black dark:after:bg-white after:left-0 after:-bottom-1 after:duration-300 hover:after:w-full' onClick={closeMenu}>My work</a></li> */}
                     <li><a href="#contact" className='font-Ovo relative after:content-[""] after:absolute after:w-0 after:h-[2px] after:bg-black dark:after:bg-white after:left-0 after:-bottom-1 after:duration-300 hover:after:w-full' onClick={closeMenu}>Contact me</a></li>
                 </ul>
             </nav>
