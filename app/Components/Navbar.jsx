@@ -53,7 +53,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
 
                     </div>
                 </ul>
-                <div className='flex flex-center gap-3'>
+                <div className='flex flex-center gap-3 md:hidden'>
                     <button onClick={() => setIsDarkMode(prev => !prev)}>
                         {isDarkMode ? (
                             <Icons.MoonIcon className=" text-white" />
