@@ -37,26 +37,27 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
                     {/* <li><a href="#services" className='font-Ovo relative after:content-[""] after:absolute after:w-0 after:h-[2px] after:bg-black dark:after:bg-white after:left-0 after:-bottom-1 after:duration-300 hover:after:w-full text-[15px] lg:text-base'>Services</a></li> */}
                     {/* <li><a href="#work" className='font-Ovo relative after:content-[""] after:absolute after:w-0 after:h-[2px] after:bg-black dark:after:bg-white after:left-0 after:-bottom-1 after:duration-300 hover:after:w-full text-[15px] lg:text-base'>My work</a></li> */}
                     <li><a href="#contact" className='font-Ovo relative after:content-[""] after:absolute after:w-0 after:h-[2px] after:bg-black dark:after:bg-white after:left-0 after:-bottom-1 after:duration-300 hover:after:w-full text-[15px] lg:text-base'>Contact me</a></li>
-                </ul>
 
-                <div className='flex flex-center gap-3'>
-                    <button onClick={() => setIsDarkMode(prev => !prev)}>
-                        {isDarkMode ? (
-                            <Icons.MoonIcon className=" text-white" />
-                        ) : (
-                            <Icons.SunIcon className=" text-black" />
-                        )}
-                    </button>
-                    <a href="#contact" className='hidden group lg:flex items-center gap-3 px-9 py-2 border border-gray-500 rounded-full ml-4 font-Ovo font-semibold dark:border-white/50'>
+
+                    <div className='flex flex-center gap-3'>
+                        <button onClick={() => setIsDarkMode(prev => !prev)}>
+                            {isDarkMode ? (
+                                <Icons.MoonIcon className=" text-white" />
+                            ) : (
+                                <Icons.SunIcon className=" text-black" />
+                            )}
+                        </button>
+                        {/* <a href="#contact" className='hidden group lg:flex items-center gap-3 px-9 py-2 border border-gray-500 rounded-full ml-4 font-Ovo font-semibold dark:border-white/50'>
                         Contact <BsArrowUpRightCircleFill className="w-5 text-4xl relative z-10 transition-transform duration-300 group-hover:rotate-[133deg]" />
-                    </a>
-                    <button className='block md:hidden' onClick={openMenu}>
-                        {isDarkMode ?
-                            <CgMenu className="w-7 h-7 text-white" /> :
-                            <CgMenu className="w-7 h-7" />
-                        }
-                    </button>
-                </div>
+                    </a> */}
+                        <button className='block md:hidden' onClick={openMenu}>
+                            {isDarkMode ?
+                                <CgMenu className="w-7 h-7 text-white" /> :
+                                <CgMenu className="w-7 h-7" />
+                            }
+                        </button>
+                    </div>
+                </ul>
 
                 {/* For mobile */}
 
@@ -83,5 +84,4 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
         </>
     );
 };
-
 export default Navbar;
