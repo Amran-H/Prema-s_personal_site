@@ -1,74 +1,38 @@
 [
     {
-        "title": "My Restaurant",
-        "description": "My Restaurant website features a responsive design, with user and admin dashboards. Users can browse the menu, add items to the cart, and make payments via Stripe. It uses Firebase authentication for secure login, and the admin panel allows for order and menu management.",
-        "bgImage": "/My-restaurant.png",
-        "github": "https://github.com/Amran-H/My_Restaurant_Client",
-        "demo": "https://my-restaurant-2f3ca.web.app/",
-        "technologies": [
-            "React",
-            "Node.js",
-            "MongoDB",
-            "Express.js",
-            "Tailwind",
-            "Firebase"
-        ]
-    },
-    {
-        "title": "Doctors Portal",
-        "description": "Doctors Portal is a responsive website for scheduling doctor appointments. Users must log in to book, view, or manage their schedules. The dashboard displays all appointments, and users can delete their schedules if needed.",
-        "bgImage": "/DoctorPortal-2.png",
-        "github": "https://github.com/Amran-H/doctors-portal-client",
-        "demo": "https://doctors-portal-493d8.web.app/",
-        "technologies": [
-            "React",
-            "Node.js",
-            "MongoDB",
-            "Express.js",
-            "Tailwind",
-            "Firebase"
-        ]
-    },
-    {
-        "title": "Stunning Portfolio",
-        "description": "This is a React-based portfolio project styled with Vanilla CSS. It features a clean and responsive design. It includes sections for skills, projects, and contact forms, providing a structured showcase of work and expertise.",
+        "title": "Market Entry Strategy Case",
+        "description": "Analyzed market size, competition, and consumer behavior to recommend an entry strategy for a local FMCG brand, including positioning and channel strategy.",
         "bgImage": "/portfolio.png",
-        "github": "https://github.com/Amran-H/my-new-portfolio",
-        "demo": "https://portfolio2-by-amran.netlify.app/",
+        "github": "",
+        "demo": "",
         "technologies": [
-            "React",
-            "Node.js",
-            "MongoDB",
-            "Express.js"
+            "SWOT",
+            "Porter’s Five Forces",
+            "Segmentation"
         ]
     },
     {
-        "title": "Survey Bee",
-        "description": "Survey Bee is an online survey platform that allows users to create, distribute, and analyze surveys. It features an intuitive UI for designing questionnaires, collecting responses, and helps data-driven decision-making.",
+        "title": "Survey-based Consumer Insight",
+        "description": "Designed and conducted a student survey, cleaned data, and presented insights on purchase drivers and satisfaction with visual summaries.",
         "bgImage": "/surveyBee.png",
-        "github": "https://github.com/Tawhidul3233/survey-bee-client",
-        "demo": "https://survey-bee.netlify.app/",
+        "github": "",
+        "demo": "",
         "technologies": [
-            "React",
-            "Next.js",
-            "MongoDB",
-            "Express.js",
-            "Tailwind",
-            "Firebase"
+            "Questionnaire Design",
+            "Excel/SPSS",
+            "Data Visualization"
         ]
     },
     {
-        "title": "SkyPearl News",
-        "description": "SkyPearl News is an online news platform that provides the latest updates across various categories. Users can log in via Google or GitHub, explore trending stories, and engage with content through social sharing features.",
+        "title": "Brand Positioning Presentation",
+        "description": "Prepared a presentation on repositioning for a local brand using perceptual mapping and communication strategy.",
         "bgImage": "/news.png",
-        "github": "https://github.com/Amran-H/SkyPearl-News",
-        "demo": "https://skypearl-news.web.app/",
+        "github": "",
+        "demo": "",
         "technologies": [
-            "React",
-            "Node.js",
-            "MongoDB",
-            "Tailwind",
-            "Firebase"
+            "STP",
+            "Perceptual Map",
+            "IMC"
         ]
     }
 ]

@@ -1,38 +1,38 @@
 [
     {
-        "title": "Web Development",
-        "description": "I create responsive and dynamic web applications using modern technologies like React, Next.js, and Node.js. Focusing on clean code, performance, and user experience.",
+        "title": "Business Case Analysis",
+        "description": "Structured problem-solving for real-world business cases: situation analysis, problem definition, alternatives, and recommendations.",
         "features": [
             {
                 "iconName": "FaLaptopCode",
-                "text": "Custom Web Applications"
+                "text": "Problem structuring"
             },
             {
                 "iconName": "FaDesktop",
-                "text": "Responsive Design"
+                "text": "Decision frameworks (SWOT, 4P, 7S)"
             },
             {
                 "iconName": "FaCode",
-                "text": "Clean & Optimized Code"
+                "text": "Actionable recommendations"
             }
         ],
         "mainIconName": "FaCode"
     },
     {
-        "title": "UI/UX Design",
-        "description": "I design intuitive and engaging user interfaces with a focus on user experience. Creating visually appealing designs that enhance user interaction and satisfaction.",
+        "title": "Marketing & Consumer Insights",
+        "description": "Research planning, survey design, and insight generation to support marketing strategy and brand decisions.",
         "features": [
             {
                 "iconName": "FaFigma",
-                "text": "Figma Design"
+                "text": "Survey/questionnaire design"
             },
             {
                 "iconName": "FaPalette",
-                "text": "UI Components"
+                "text": "Segmentation & positioning"
             },
             {
                 "iconName": "FaSwatchbook",
-                "text": "Design Systems"
+                "text": "Presentation & reporting"
             }
         ],
         "mainIconName": "FaPaintBrush"

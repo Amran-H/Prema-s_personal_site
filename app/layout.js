@@ -13,7 +13,7 @@ const ovoFont = Ovo({
 });
 
 export const metadata = {
-  title: "Amran Hossain",
+  title: "Prema Rani Bhowmik",
   description: "Amran Hossain is a full-stack web developer and passionate programmer from Bangladesh. He specializes in building innovative solutions and solving complex problems. With a BBA in Tourism and Hospitality Management, he combines analytical thinking with technical expertise to create impactful digital experiences.",
 };
 

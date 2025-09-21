@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'motion/react';
-import { FaReact, FaNodeJs, FaGit, FaHtml5, FaCss3Alt, FaBootstrap, FaDatabase } from 'react-icons/fa';
+import { FaReact, FaNodeJs, FaGit, FaHtml5, FaCss3Alt, FaBootstrap, FaDatabase, FaPalette, FaDesktop } from 'react-icons/fa';
 import { SiMongodb, SiExpress, SiTailwindcss, SiJavascript, SiNextdotjs, SiRedux, SiFirebase } from 'react-icons/si';
 
 const Skills = () => {
@@ -35,6 +35,8 @@ const Skills = () => {
             FaCss3Alt,
             FaBootstrap,
             FaDatabase,
+            FaPalette,
+            FaDesktop,
             SiMongodb,
             SiExpress,
             SiTailwindcss,
@@ -79,13 +81,13 @@ const Skills = () => {
                         initial={{ y: -20, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}
                         transition={{ duration: 0.5, delay: 0.2 }}
-                        className='text-center mb-2 text-lg font-ovo'>What I Know</motion.h4>
+                        className='text-center mb-2 text-lg font-ovo'>Areas of Learning</motion.h4>
 
                     <motion.h2
                         initial={{ y: -20, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}
                         transition={{ duration: 0.5, delay: 0.4 }}
-                        className='text-center text-5xl font-Ovo mb-16'>My Development Skills</motion.h2>
+                        className='text-center text-5xl font-Ovo mb-16'>Tourism & Hospitality Skills</motion.h2>
 
                     {/* <motion.div
                         initial={{ scaleX: 0 }}

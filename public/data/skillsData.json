@@ -1,100 +1,70 @@
 [
     {
-        "category": "Frontend Development",
+        "category": "Tourism & Hospitality Core",
         "skills": [
             {
-                "iconName": "FaHtml5",
-                "name": "HTML5",
-                "level": "95%",
-                "color": "#E34F26"
-            },
-            {
-                "iconName": "FaCss3Alt",
-                "name": "CSS3",
-                "level": "90%",
-                "color": "#1572B6"
-            },
-            {
-                "iconName": "SiJavascript",
-                "name": "JavaScript",
+                "iconName": "FaDatabase",
+                "name": "Hospitality Operations Basics",
                 "level": "85%",
-                "color": "#F7DF1E"
-            },
-            {
-                "iconName": "FaReact",
-                "name": "React.js",
-                "level": "90%",
-                "color": "#61DAFB"
-            },
-            {
-                "iconName": "SiNextdotjs",
-                "name": "Next.js",
-                "level": "85%",
-                "color": "#000000"
-            },
-            {
-                "iconName": "SiRedux",
-                "name": "Redux",
-                "level": "80%",
-                "color": "#764ABC"
-            }
-        ]
-    },
-    {
-        "category": "Backend Development",
-        "skills": [
-            {
-                "iconName": "FaNodeJs",
-                "name": "Node.js",
-                "level": "85%",
-                "color": "#339933"
-            },
-            {
-                "iconName": "SiExpress",
-                "name": "Express.js",
-                "level": "85%",
-                "color": "#000000"
-            },
-            {
-                "iconName": "SiMongodb",
-                "name": "MongoDB",
-                "level": "80%",
-                "color": "#47A248"
+                "color": "#2E8B57"
             },
             {
                 "iconName": "FaDatabase",
-                "name": "SQL",
-                "level": "75%",
-                "color": "#4479A1"
+                "name": "Tourism Geography & Products",
+                "level": "80%",
+                "color": "#20B2AA"
             },
             {
-                "iconName": "SiFirebase",
-                "name": "Firebase",
-                "level": "80%",
-                "color": "#FFCA28"
+                "iconName": "FaDatabase",
+                "name": "Service Quality (SERVQUAL)",
+                "level": "78%",
+                "color": "#6A5ACD"
             }
         ]
     },
     {
-        "category": "Tools & Technologies",
+        "category": "Guest Experience & Marketing",
         "skills": [
             {
-                "iconName": "FaGit",
-                "name": "Git",
-                "level": "85%",
-                "color": "#F05032"
-            },
-            {
-                "iconName": "FaBootstrap",
-                "name": "Bootstrap",
+                "iconName": "FaPalette",
+                "name": "Customer Service & Etiquette",
                 "level": "90%",
-                "color": "#7952B3"
+                "color": "#1E90FF"
             },
             {
-                "iconName": "SiTailwindcss",
-                "name": "Tailwind CSS",
-                "level": "95%",
-                "color": "#06B6D4"
+                "iconName": "FaPalette",
+                "name": "Hospitality Marketing",
+                "level": "82%",
+                "color": "#FF8C00"
+            },
+            {
+                "iconName": "FaPalette",
+                "name": "Event Planning Basics",
+                "level": "80%",
+                "color": "#FF6F61"
+            }
+        ]
+    },
+    {
+        "category": "Professional Competencies",
+        "skills": [
+            {
+                "iconName": "FaDesktop",
+                "name": "Communication & Presentation",
+                "level": "92%",
+                "color": "#4169E1"
+            },
+            {
+                "iconName": "FaDesktop",
+                "name": "Teamwork & Leadership",
+                "level": "85%",
+                "color": "#32CD32"
+            },
+            {
+                "iconName": "FaDesktop",
+                "name": "Time & Project Management",
+                "level": "82%",
+                "color": "#708090"
             }
         ]
     }

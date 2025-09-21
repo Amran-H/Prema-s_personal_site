@@ -1,17 +1,17 @@
 [
     {
-        "title": "Languages",
-        "description": "HTML, JavaScript, Python",
-        "iconType": "code"
-    },
-    {
-        "title": "Education",
-        "description": "BBA in Tourism and Hospitality Management",
+        "title": "Program",
+        "description": "MBA, Noakhali Science and Technology University",
         "iconType": "education"
     },
     {
-        "title": "Projects",
-        "description": "Developed several website for my clients",
+        "title": "Interests",
+        "description": "Business analytics, marketing strategy, organizational leadership",
+        "iconType": "projects"
+    },
+    {
+        "title": "Activities",
+        "description": "Case competitions, research presentations, teamwork & communication",
         "iconType": "projects"
     }
 ]

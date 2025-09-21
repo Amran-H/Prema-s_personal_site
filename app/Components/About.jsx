@@ -1,11 +1,8 @@
 import { useEffect, useState } from 'react';
-import Image from 'next/image';
-import user from '../../public/user-1.png';
+// Image removed from About section for a cleaner, text-focused layout
 import React from 'react';
 import { motion } from 'motion/react';
-import { FaReact, FaNodeJs, FaGit, FaHtml5, FaCss3Alt, FaBootstrap } from 'react-icons/fa';
-import { SiMongodb, SiExpress, SiTailwindcss, SiJavascript } from 'react-icons/si';
-import { FaCode, FaGraduationCap, FaProjectDiagram } from 'react-icons/fa';
+import { FaGraduationCap, FaProjectDiagram, FaCode } from 'react-icons/fa';
 
 const About = ({ isDarkMode }) => {
     const [infoList, setInfoList] = useState([]);
@@ -41,116 +38,109 @@ const About = ({ isDarkMode }) => {
                 initial={{ opacity: 0, y: -20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className='text-center mb-2 text-lg font-ovo'>Introduction</motion.h4>
+                className='text-center mb-2 text-lg font-ovo'>Get to know me</motion.h4>
             <motion.h2
                 initial={{ opacity: 0, y: -20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
-                className='text-center text-5xl font-Ovo'>About me</motion.h2 >
+                className='text-center text-5xl font-Ovo'>About</motion.h2 >
 
             <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.8 }}
-                className='flex w-full flex-col lg:flex-row items-center gap-10 lg:gap-20 my-10'>
+                className='w-full my-10'>
                 <motion.div
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.6 }}
-                    className='w-64 sm:w-72 lg:w-[320px] flex-shrink-0'>
-                    <Image src={user} alt='user' className='w-full rounded-3xl' />
-                </motion.div>
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ duration: 0.5, delay: 0.4 }}
-                    className='flex-1'>
-                    <p className='mb-10 max-w-2xl font-Ovo text-justify'>
-                        {/* A certified MERN stack web developer with a year of experience. I specialize in dynamic web applications using MongoDB, Expressjs, Reactjs, and Nodejs. Expertise: HTML5, CSS3, JavaScript, Reactjs, Bootstrap, Tailwind CSS. Back-end: Nodejs, Expressjs, MongoDB, Mongoose, RESTful APIs. Tools: Git, GitHub, Netlify. I prioritize clean code, performance, and scalability. */}
-                        I’m a certified MERN stack web developer with a BBA and a passion for continuous learning. With 3 years of experience, I specialize in building dynamic web applications using MongoDB, Express.js, React.js, and Node.js. Driven by a curiosity for research and development, I’m always looking to solve real-world problems in both the academic and development sectors.
-                    </p>
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                    className='relative bg-white/60 dark:bg-gray-800/60 backdrop-blur-md rounded-3xl p-8 shadow-xl border border-gray-100 dark:border-gray-700'
+                >
+                    <div className='absolute inset-0 overflow-hidden rounded-3xl opacity-5 pointer-events-none'>
+                        <div className='absolute -right-24 -top-24 w-96 h-96 bg-blue-500 rotate-45'></div>
+                        <div className='absolute -left-24 -bottom-24 w-96 h-96 bg-indigo-500 rotate-45'></div>
+                    </div>
 
-                    <motion.ul
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        transition={{ duration: 0.5, delay: 0.5 }}
-                        className='grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl '>
-                        {
-                            infoList.map(({ iconType, title, description }, index) => (
-                                <motion.li
-                                    whileHover={{ scale: 1.05 }}
-                                    key={index}
-                                    className='relative overflow-hidden bg-white/50 backdrop-blur-sm border-[0.5px] 
-                                    border-gray-100 shadow-md rounded-2xl p-6 cursor-pointer 
-                                    hover:-translate-y-2 duration-300 
-                                    hover:shadow-xl hover:shadow-gray-200
-                                    group
-                                    dark:bg-gray-900/50 dark:border-gray-900 
-                                    dark:hover:shadow-gray-900 dark:shadow-gray-600'>
-                                    <div className='absolute inset-0 bg-gradient-to-r from-blue-50 to-indigo-50 
-                                    opacity-0 group-hover:opacity-100 transition-opacity duration-300
-                                    dark:from-blue-950/30 dark:to-indigo-950/30'></div>
+                    <div className='relative z-10'>
+                        <motion.span
+                            initial={{ y: -10, opacity: 0 }}
+                            whileInView={{ y: 0, opacity: 1 }}
+                            transition={{ duration: 0.4, delay: 0.25 }}
+                            className='inline-flex items-center px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-sm font-medium dark:bg-blue-900/30 dark:text-blue-300'
+                        >
+                            MBA Student • NSTU
+                        </motion.span>
 
-                                    <div className='relative z-10'>
-                                        <div className='bg-blue-50 rounded-xl w-12 h-12 flex items-center justify-center mb-4
-                                        group-hover:bg-blue-100 dark:group-hover:bg-black transition-colors duration-300
-                                        dark:bg-gray-800'>
-                                            {getIcon(iconType)}
+                        <motion.p
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            transition={{ duration: 0.5, delay: 0.35 }}
+                            className='mt-4 max-w-3xl font-Ovo text-base md:text-lg text-justify'
+                        >
+                            I am Prema Rani Bhowmik, an MBA student at Noakhali Science and Technology University. My interests include business analytics, marketing strategy, and organizational behavior. I enjoy working on case studies, presentations, and research-based projects that combine data, consumer insight, and practical problem-solving. I focus on communication, leadership, and collaboration to drive meaningful outcomes.
+                        </motion.p>
+
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            transition={{ duration: 0.5, delay: 0.45 }}
+                            className='mt-6 flex flex-wrap gap-2'
+                        >
+                            <span className='px-3 py-1 rounded-full text-sm bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200'>Business Analytics</span>
+                            <span className='px-3 py-1 rounded-full text-sm bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200'>Marketing Strategy</span>
+                            <span className='px-3 py-1 rounded-full text-sm bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200'>Organizational Behavior</span>
+                            <span className='px-3 py-1 rounded-full text-sm bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200'>Leadership</span>
+                        </motion.div>
+
+                        <motion.div
+                            initial={{ scaleX: 0 }}
+                            whileInView={{ scaleX: 1 }}
+                            transition={{ duration: 0.5, delay: 0.55 }}
+                            className='mt-8 h-px w-full bg-gradient-to-r from-transparent via-gray-300 dark:via-gray-600 to-transparent'
+                        ></motion.div>
+
+                        <motion.ul
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            transition={{ duration: 0.5, delay: 0.6 }}
+                            className='mt-8 grid grid-cols-1 sm:grid-cols-3 gap-6'>
+                            {
+                                infoList.map(({ iconType, title, description }, index) => (
+                                    <motion.li
+                                        whileHover={{ scale: 1.05 }}
+                                        key={index}
+                                        className='relative overflow-hidden bg-white/50 backdrop-blur-sm border-[0.5px] 
+                                        border-gray-100 shadow-md rounded-2xl p-6 cursor-pointer 
+                                        hover:-translate-y-2 duration-300 
+                                        hover:shadow-xl hover:shadow-gray-200
+                                        group
+                                        dark:bg-gray-900/50 dark:border-gray-900 
+                                        dark:hover:shadow-gray-900 dark:shadow-gray-600'>
+                                        <div className='absolute inset-0 bg-gradient-to-r from-blue-50 to-indigo-50 
+                                        opacity-0 group-hover:opacity-100 transition-opacity duration-300
+                                        dark:from-blue-950/30 dark:to-indigo-950/30'></div>
+
+                                        <div className='relative z-10'>
+                                            <div className='bg-blue-50 rounded-xl w-12 h-12 flex items-center justify-center mb-4
+                                            group-hover:bg-blue-100 dark:group-hover:bg-black transition-colors duration-300
+                                            dark:bg-gray-800'>
+                                                {getIcon(iconType)}
+                                            </div>
+                                            <h3 className='mb-3 py-3 text-lg font-semibold text-gray-800 
+                                            group-hover:text-blue-600 transition-colors duration-300
+                                            dark:text-white dark:group-hover:text-blue-400'>
+                                                {title}
+                                            </h3>
+                                            <p className='text-gray-600 text-sm leading-relaxed
+                                            dark:text-gray-300'>
+                                                {description}
+                                            </p>
                                         </div>
-                                        <h3 className='mb-3 py-3 text-lg font-semibold text-gray-800 
-                                        group-hover:text-blue-600 transition-colors duration-300
-                                        dark:text-white dark:group-hover:text-blue-400'>
-                                            {title}
-                                        </h3>
-                                        <p className='text-gray-600 text-sm leading-relaxed
-                                        dark:text-gray-300'>
-                                            {description}
-                                        </p>
-                                    </div>
-                                </motion.li>
-                            ))
-                        }
-                    </motion.ul>
-                    <motion.h4
-                        initial={{ y: 20, opacity: 0 }}
-                        whileInView={{ y: 0, opacity: 1 }}
-                        transition={{ duration: 0.5, delay: 0.6 }}
-                        className='my-6 text-gray-700 font-Ovo dark:text-white'>
-                        Tools I use
-                    </motion.h4>
-                    <motion.ul
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        transition={{ duration: 0.5, delay: 0.5 }}
-                        className='flex flex-wrap items-center gap-3 sm:gap-4'>
-                        <motion.li whileHover={{ scale: 1.1 }} className='flex items-center justify-center border-[0.5px] border-gray-400 rounded-full shadow-lg shadow-gray-400 p-5 cursor-pointer hover:scale-110 ease-in duration-300'>
-                            <FaReact className="w-5 h-5 text-[#61DAFB] " />
-                        </motion.li>
-                        <motion.li whileHover={{ scale: 1.1 }} className='flex items-center justify-center border-[0.5px] border-gray-400 rounded-full shadow-lg shadow-gray-400 p-5 cursor-pointer hover:scale-110 ease-in duration-300'>
-                            <FaNodeJs className="w-5 h-5 text-[#339933]" />
-                        </motion.li>
-                        <motion.li whileHover={{ scale: 1.1 }} className='flex items-center justify-center border-[0.5px] border-gray-400 rounded-full shadow-lg shadow-gray-400 p-5 cursor-pointer hover:scale-110 ease-in duration-300'>
-                            <SiMongodb className="w-5 h-5 text-[#47A248]" />
-                        </motion.li>
-                        <motion.li whileHover={{ scale: 1.1 }} className='flex items-center justify-center border-[0.5px] border-gray-400 rounded-full shadow-lg shadow-gray-400 p-5 cursor-pointer hover:scale-110 ease-in duration-300'>
-                            <SiExpress className="w-5 h-5" />
-                        </motion.li>
-                        <motion.li whileHover={{ scale: 1.1 }} className='flex items-center justify-center border-[0.5px] border-gray-400 rounded-full shadow-lg shadow-gray-400 p-5 cursor-pointer hover:scale-110 ease-in duration-300'>
-                            <FaHtml5 className="w-5 h-5 text-[#E34F26]" />
-                        </motion.li>
-                        <motion.li whileHover={{ scale: 1.1 }} className='flex items-center justify-center border-[0.5px] border-gray-400 rounded-full shadow-lg shadow-gray-400 p-5 cursor-pointer hover:scale-110 ease-in duration-300'>
-                            <FaCss3Alt className="w-5 h-5 text-[#1572B6]" />
-                        </motion.li>
-                        <motion.li whileHover={{ scale: 1.1 }} className='flex items-center justify-center border-[0.5px] border-gray-400 rounded-full shadow-lg shadow-gray-400 p-5 cursor-pointer hover:scale-110 ease-in duration-300'>
-                            <SiJavascript className="w-5 h-5 text-[#F7DF1E]" />
-                        </motion.li>
-                        <motion.li whileHover={{ scale: 1.1 }} className='flex items-center justify-center border-[0.5px] border-gray-400 rounded-full shadow-lg shadow-gray-400 p-5 cursor-pointer hover:scale-110 ease-in duration-300'>
-                            <SiTailwindcss className="w-5 h-5 text-[#06B6D4]" />
-                        </motion.li>
-                        <motion.li whileHover={{ scale: 1.1 }} className='flex items-center justify-center border-[0.5px] border-gray-400 rounded-full shadow-lg shadow-gray-400 p-5 cursor-pointer hover:scale-110 ease-in duration-300'>
-                            <FaGit className="w-5 h-5 text-[#F05032]" />
-                        </motion.li>
-                    </motion.ul>
+                                    </motion.li>
+                                ))
+                            }
+                        </motion.ul>
+                    </div>
                 </motion.div>
             </motion.div>
         </motion.div>
