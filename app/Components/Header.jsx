@@ -6,27 +6,40 @@ import Image from 'next/image';
 import user from '../../public/prema.jpeg';
 
 const HeaderSkeleton = () => (
-    <div className='w-11/12 max-w-5xl text-center mx-auto min-h-screen pt-10 sm:py-0 flex flex-col items-center justify-center gap-4'>
-        {/* Profile Image Skeleton */}
-        <div className="w-32 h-32 rounded-full bg-gray-200 dark:bg-gray-700 animate-pulse"></div>
+    <div className='w-11/12 max-w-5xl mx-auto min-h-screen pt-10 sm:py-0 flex items-center'>
+        <div className='grid lg:grid-cols-2 items-center gap-10 w-full'>
+            {/* Left: Profile Image Skeleton */}
+            <div className='flex justify-center lg:justify-start'>
+                <div className='relative w-64 sm:w-72 lg:w-[320px]'>
+                    <div className='absolute -inset-1 rounded-3xl bg-gray-200 dark:bg-gray-700 opacity-20 blur-2xl'></div>
+                    <div className="w-full h-[400px] rounded-3xl bg-gray-200 dark:bg-gray-700 animate-pulse"></div>
+                </div>
+            </div>
 
-        {/* Name Skeleton */}
-        <div className="h-8 bg-gray-200 dark:bg-gray-700 rounded w-60 mx-auto mt-3 animate-pulse"></div>
+            {/* Right: Content Skeleton */}
+            <div className='text-center lg:text-left'>
+                {/* Badge Skeleton */}
+                <div className="w-32 h-6 bg-gray-200 dark:bg-gray-700 rounded-full animate-pulse mx-auto lg:mx-0"></div>
 
-        {/* Title Skeleton */}
-        <div className="h-16 bg-gray-200 dark:bg-gray-700 rounded w-3/4 mx-auto mt-2 animate-pulse"></div>
+                {/* Name Skeleton */}
+                <div className="h-12 bg-gray-200 dark:bg-gray-700 rounded w-72 mx-auto lg:mx-0 mt-4 animate-pulse"></div>
 
-        {/* Description Skeleton */}
-        <div className="space-y-2 w-full max-w-3xl mx-auto px-4 mt-3">
-            <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-full animate-pulse"></div>
-            <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-full animate-pulse"></div>
-            <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-2/3 animate-pulse"></div>
-        </div>
+                {/* Skills Skeleton */}
+                <div className="h-6 bg-gray-200 dark:bg-gray-700 rounded w-64 mx-auto lg:mx-0 mt-2 animate-pulse"></div>
 
-        {/* Buttons Skeleton */}
-        <div className='flex flex-col sm:flex-row items-center gap-4 mt-8'>
-            <div className="h-12 bg-gray-200 dark:bg-gray-700 rounded-full w-40 animate-pulse"></div>
-            <div className="h-12 bg-gray-200 dark:bg-gray-700 rounded-full w-40 animate-pulse"></div>
+                {/* Description Skeleton */}
+                <div className="space-y-2 mt-5">
+                    <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-full animate-pulse"></div>
+                    <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-full animate-pulse"></div>
+                    <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-3/4 animate-pulse"></div>
+                </div>
+
+                {/* Buttons Skeleton */}
+                <div className='mt-7 flex flex-col sm:flex-row items-center lg:items-start gap-4'>
+                    <div className="h-12 bg-gray-200 dark:bg-gray-700 rounded-full w-40 animate-pulse"></div>
+                    <div className="h-12 bg-gray-200 dark:bg-gray-700 rounded-full w-40 animate-pulse"></div>
+                </div>
+            </div>
         </div>
     </div>
 );
@@ -88,7 +101,7 @@ const Header = () => {
                             transition={{ duration: 0.5, delay: 0.5 }}
                             className='mt-2 text-gray-600 dark:text-gray-300'
                         >
-                            Business Analytics • Marketing Strategy • Leadership
+                            Business graduate majoring in Tourism and Hospitality Management.
                         </motion.p>
 
                         <motion.p
