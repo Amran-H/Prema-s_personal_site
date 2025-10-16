@@ -3,7 +3,7 @@ import { motion } from 'motion/react';
 import { FaDownload } from 'react-icons/fa';
 import { BsArrowRight } from 'react-icons/bs';
 import Image from 'next/image';
-import user from '../../public/prema.jpeg';
+import user from '../../public/prema.jpg';
 
 const HeaderSkeleton = () => (
     <div className='w-11/12 max-w-5xl mx-auto min-h-screen pt-10 sm:py-0 flex items-center'>
