@@ -130,7 +130,7 @@ const Header = () => {
                                 initial={{ y: 20, opacity: 0 }}
                                 whileInView={{ y: 0, opacity: 1 }}
                                 transition={{ duration: 0.4, delay: 0.8 }}
-                                href="#"
+                                href="https://drive.google.com/file/d/1GK43jXWfF7K87NzFGBgVIlY3XhxrPhBk/view?usp=drivesdk"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className='group relative px-8 py-3 rounded-full border border-gray-500 bg-white text-black flex items-center gap-2 overflow-hidden hover:border-blue-500 transition-all duration-300 dark:bg-white dark:text-black dark:border-gray-400'
